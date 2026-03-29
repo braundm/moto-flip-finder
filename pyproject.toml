@@ -1,0 +1,5 @@
+[project]
+name = "moto-flip-finder"
+version = "0.1.0"
+description = "AI-assisted system for finding undervalued damaged motorcycles"
+requires-python = ">=3.11"
