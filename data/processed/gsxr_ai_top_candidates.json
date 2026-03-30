@@ -1,0 +1,936 @@
+[
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-suzuki-gsx-r-600-a2-34kw-CID5-ID19R3oO.html",
+      "title": "Suzuki GSX-R Suzuki gsx-r 600 A2 34kW",
+      "price_pln": 28500,
+      "location": "Toruń",
+      "city": "Toruń",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Na sprzedaż Suzuki gsx-r 600, w moim posiadaniu od sierpnia 2022 roku. wymienione przez ten czas zostało: Sprzęgło Napęd Opona tył Stojan alternatora Regeneracja pompy hamulcowej Dodatki: Uchwyt na telefon wraz z ładowarka Akcesoryjny wydech Yoshimura (katalizator na miejscu) Alarm Stompgripy CrushPady Nakładka na siedzenie pasażera Motocykl do obejrzenia w Mierzynku w okolicach Torunia.",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/05ild0lod2dt-PL/image;s=1020x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4ewx2w1r8evt1-PL/image;s=1020x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4i9n6py3qnqr3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4i9n6py3qnqr3-PL/image;s=1020x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/atkf9oamjp0l-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/atkf9oamjp0l-PL/image;s=1020x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/lhdzj0zn16kt2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/lhdzj0zn16kt2-PL/image;s=1020x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ovhrmeh6bd4e-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ovhrmeh6bd4e-PL/image;s=1020x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/uard5000bgr12-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/uard5000bgr12-PL/image;s=1020x1360"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2008,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Polska",
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2008",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Polska"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "alarm",
+        "napęd",
+        "opona tył",
+        "regeneracja pompy hamulcowej",
+        "sprzęgło",
+        "stojan alternatora",
+        "wymienione"
+      ],
+      "suspected_damage": [
+        "problem z pompą hamulcową wymagający regeneracji",
+        "usterka/wada stojana alternatora",
+        "zużycie napędu (łańcuch/zębatki)",
+        "zużycie sprzęgła (wymiana)",
+        "zużycie tylnej opony"
+      ],
+      "hidden_risks": [
+        "dodatkowy pobór prądu przez alarm i ładowarkę telefonu może obciążać instalację elektryczną",
+        "możliwy intensywny torowy lub dynamiczny styl jazdy sugerowany zakresem wymian",
+        "możliwy wcześniejszy spadek skuteczności hamowania (regeneracja pompy)",
+        "potencjalne wcześniejsze problemy z ładowaniem (stojan alternatora)"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "alarm",
+      "napęd",
+      "opona tył",
+      "regeneracja pompy hamulcowej",
+      "sprzęgło",
+      "stojan alternatora",
+      "wymienione"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "dodatkowy pobór prądu przez alarm i ładowarkę telefonu może obciążać instalację elektryczną",
+      "możliwy intensywny torowy lub dynamiczny styl jazdy sugerowany zakresem wymian",
+      "możliwy wcześniejszy spadek skuteczności hamowania (regeneracja pompy)",
+      "potencjalne wcześniejsze problemy z ładowaniem (stojan alternatora)"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 134,
+    "analysis_summary": "W opisie widac sygnaly problemow z: problem z pompą hamulcową wymagający regeneracji, usterka/wada stojana alternatora, zużycie napędu (łańcuch/zębatki), zużycie sprzęgła (wymiana), zużycie tylnej opony. Ukryte ryzyka dotycza: dodatkowy pobór prądu przez alarm i ładowarkę telefonu może obciążać instalację elektryczną, możliwy intensywny torowy lub dynamiczny styl jazdy sugerowany zakresem wymian, możliwy wcześniejszy spadek skuteczności hamowania (regeneracja pompy), potencjalne wcześniejsze problemy z ładowaniem (stojan alternatora). Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsxr600-k7-2007r-CID5-ID19Pxy3.html?search_reason=search%7Corganic",
+      "title": "Suzuki gsxr600 k7 2007r",
+      "price_pln": 20999,
+      "location": "Toruń",
+      "city": "Toruń",
+      "region": null,
+      "short_description": "do negocjacji",
+      "full_description": "Opis Na sprzedaż Suzuki GSX-R 600 K7 (2007) – kultowy sportowy motocykl - moje oczko w głowie. Motocykl w moich rękach 3 sezon, użytkowany rekreacyjnie i z głową ;) Technicznie w bardzo dobrym stanie – wszystko działa jak należy, gotowy do jazdy bez wkładu na start. Najważniejsze informacje: - Przebieg: ~72 000 km - Serwis olejowy robiony w poprzednim sezonie (przejechane od tego czasu ok. 1500 km) - Płyn hamulcowy i chłodniczy wymienione w zeszłym sezonie  (2025r) - Napęd w dobrym stanie (około połowa naciągu) - Opony: Bridgestone Battlax S22 - Lagi suche – brak wycieków - W 2024 roku wymieniony akumulator oraz przednie klocki hamulcowe - W 2023 roku wymieniona tarcza sprzęgła - W 2022 roku wymienione uszczelniacze amortyzatorów + olej w zawieszeniu Motor odkąd go posiadam serwisowany w jednym zaufanym warsztacie Dodatki / wyposażenie: - Zaślepka miejsca pasażera + dodatkowo kanapa pasażera - Przyciemniana szyba - Oświetlenie LED - Crashpady Stan wizualny: - Lakierniczo drobne poprawki – widoczne na zdjęciach, nic nie ukrywam Formalności: - OC ważne do 22.03.2026 - Przegląd techniczny ważny do 20.05.2026 - Drugi kluczyk + karta pojazdu+dowód rej. Motocykl lekki, zwinny i bardzo dynamiczny – typowy GSX-R, który daje dużo frajdy zarówno w mieście, jak i na trasie. Sprzedaję z powodów osobistych. Motocykl w rękach kobiety – jeśli się nie boisz, zapraszam na oględziny ;)",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9r6yvi2xcemq-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9r6yvi2xcemq-PL/image;s=1000x751",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ab912e9btgn12-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ab912e9btgn12-PL/image;s=1000x997",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/igktuuau02ts1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/igktuuau02ts1-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/nb7s1h1ci19j1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/nb7s1h1ci19j1-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/okcwjlj891db-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/pc131vyhu38v-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/wxxn8pp4ag5p1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/wxxn8pp4ag5p1-PL/image;s=750x1000"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2007,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": null,
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2007",
+        "Poj. silnika": "599 cm³",
+        "Stan techniczny": "Nieuszkodzony"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "crashpady",
+        "drobne poprawki lakiernicze",
+        "gotowy do jazdy bez wkładu na start",
+        "lagi suche – brak wycieków",
+        "napęd w dobrym stanie (około połowa naciągu)",
+        "nic nie ukrywam",
+        "przebieg ~72 000 km",
+        "serwisowany w jednym zaufanym warsztacie",
+        "wszystko działa jak należy",
+        "wymieniona tarcza sprzęgła",
+        "wymienione uszczelniacze amortyzatorów + olej w zawieszeniu"
+      ],
+      "suspected_damage": [
+        "drobne poprawki lakiernicze (możliwa wcześniejsza wywrotka lub otarcia)",
+        "wymiana tarczy sprzęgła (intensywna eksploatacja lub normalne zużycie przy tym przebiegu)",
+        "wymiana uszczelniaczy lag (wcześniejszy wyciek lub zużycie zawieszenia)"
+      ],
+      "hidden_risks": [
+        "brak informacji o historii serwisowej sprzed obecnego właściciela (ew. wcześniejsze zaniedbania)",
+        "crashpady sugerują przygotowanie na ewentualny upadek i mogą maskować fakt wcześniejszych szlifów",
+        "drobne poprawki lakiernicze mogą oznaczać wcześniejsze szlify lub wywrotki niewspomniane wprost",
+        "napęd ‚około połowa naciągu’ – czeka w najbliższym czasie na wymianę",
+        "oświetlenie LED – potencjalne nielegalne lub niehomologowane przeróbki elektryki/światła",
+        "wysoki przebieg jak na sportowy motocykl (72 000 km – możliwe ukryte zużycie silnika, skrzyni i zawieszenia)"
+      ],
+      "starts": true,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "crashpady",
+      "drobne poprawki lakiernicze",
+      "gotowy do jazdy bez wkładu na start",
+      "lagi suche – brak wycieków",
+      "napęd w dobrym stanie (około połowa naciągu)",
+      "nic nie ukrywam",
+      "przebieg ~72 000 km",
+      "serwisowany w jednym zaufanym warsztacie",
+      "wszystko działa jak należy",
+      "wymieniona tarcza sprzęgła",
+      "wymienione uszczelniacze amortyzatorów + olej w zawieszeniu"
+    ],
+    "severity": "medium",
+    "starts": true,
+    "hidden_risks": [
+      "brak informacji o historii serwisowej sprzed obecnego właściciela (ew. wcześniejsze zaniedbania)",
+      "crashpady sugerują przygotowanie na ewentualny upadek i mogą maskować fakt wcześniejszych szlifów",
+      "drobne poprawki lakiernicze mogą oznaczać wcześniejsze szlify lub wywrotki niewspomniane wprost",
+      "napęd ‚około połowa naciągu’ – czeka w najbliższym czasie na wymianę",
+      "oświetlenie LED – potencjalne nielegalne lub niehomologowane przeróbki elektryki/światła",
+      "wysoki przebieg jak na sportowy motocykl (72 000 km – możliwe ukryte zużycie silnika, skrzyni i zawieszenia)"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 122,
+    "analysis_summary": "W opisie widac sygnaly problemow z: drobne poprawki lakiernicze (możliwa wcześniejsza wywrotka lub otarcia), wymiana tarczy sprzęgła (intensywna eksploatacja lub normalne zużycie przy tym przebiegu), wymiana uszczelniaczy lag (wcześniejszy wyciek lub zużycie zawieszenia). Ukryte ryzyka dotycza: brak informacji o historii serwisowej sprzed obecnego właściciela (ew. wcześniejsze zaniedbania), crashpady sugerują przygotowanie na ewentualny upadek i mogą maskować fakt wcześniejszych szlifów, drobne poprawki lakiernicze mogą oznaczać wcześniejsze szlify lub wywrotki niewspomniane wprost, napęd ‚około połowa naciągu’ – czeka w najbliższym czasie na wymianę, oświetlenie LED – potencjalne nielegalne lub niehomologowane przeróbki elektryki/światła, wysoki przebieg jak na sportowy motocykl (72 000 km – możliwe ukryte zużycie silnika, skrzyni i zawieszenia). Opis sugeruje, ze motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-CID5-ID17mpJ8.html?search_reason=search%7Cpromoted",
+      "title": "Suzuki Gsx-r 600",
+      "price_pln": 48000,
+      "location": "Świeszyno",
+      "city": "Świeszyno",
+      "region": null,
+      "short_description": "48 000 zł | do negocjacji",
+      "full_description": "Opis Sprzedam motocykl marki Suzuki Gsx-r 600 Motocykl produkcja 2021,modelowo 2022,pierwsza rejestracja 1.01.2022r USA Od marcu 2023r w Polsce w moich rękach. Cały komplety układ wydechowy marki Black Widow.(posiadam oryginał) Motocykl wystrojony w firmie MotoTune w Warszawie. Motocykl oklejony folią ppf(cały front,zadupek itp. Miejsca najbardziej narażone na uszkodzenia i zarysowania) OC ważne do marca 2026r W razie jakbym nie odbierał telefonu,proszę o smsa",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9eleyjzrxb6x2-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/bqlxj2sj4yrs1-PL/image;s=1000x750",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/eaz1yzx79jdi2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/eaz1yzx79jdi2-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/g3evmtv41qhz-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/j0507h9v9e032-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/j0507h9v9e032-PL/image;s=750x1000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/nkcboderpfvd2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/nkcboderpfvd2-PL/image;s=1000x750",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/nzkjmjwavcod2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/nzkjmjwavcod2-PL/image;s=1000x750",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ocxurwe5ry6a-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ocxurwe5ry6a-PL/image;s=750x1000"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2021,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Stany Zjednoczone",
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": true,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2021",
+        "Poj. silnika": "599 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Stany Zjednoczone"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "Black Widow wydech",
+        "USA",
+        "miejsca najbardziej narażone na uszkodzenia i zarysowania",
+        "od marca 2023 w Polsce",
+        "oklejony folią PPF",
+        "posiadam oryginał wydechu",
+        "stan techniczny: nieuszkodzony",
+        "wystrojony w MotoTune"
+      ],
+      "suspected_damage": [
+        "możliwy wcześniejszy szkodowy/aukcyjny import z USA (brak jednoznacznego opisu historii przed importem)"
+      ],
+      "hidden_risks": [
+        "brak informacji o przebiegu",
+        "brak wzmianki o serwisie, książce serwisowej, wymianach oleju/eksploatacyjnych części",
+        "import z USA – ryzyko wcześniejszego wypadku lub szkody, nawet jeśli obecnie opisany jako nieuszkodzony",
+        "modyfikacje (pełny układ wydechowy + strojenie w MotoTune) – możliwa jazda torowa/ostre użytkowanie",
+        "oklejenie folią PPF części narażonych na uszkodzenia może maskować drobne rysy lub lakierowanie"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "Black Widow wydech",
+      "USA",
+      "miejsca najbardziej narażone na uszkodzenia i zarysowania",
+      "od marca 2023 w Polsce",
+      "oklejony folią PPF",
+      "posiadam oryginał wydechu",
+      "stan techniczny: nieuszkodzony",
+      "wystrojony w MotoTune"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "brak informacji o przebiegu",
+      "brak wzmianki o serwisie, książce serwisowej, wymianach oleju/eksploatacyjnych części",
+      "import z USA – ryzyko wcześniejszego wypadku lub szkody, nawet jeśli obecnie opisany jako nieuszkodzony",
+      "modyfikacje (pełny układ wydechowy + strojenie w MotoTune) – możliwa jazda torowa/ostre użytkowanie",
+      "oklejenie folią PPF części narażonych na uszkodzenia może maskować drobne rysy lub lakierowanie"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 100,
+    "analysis_summary": "W opisie widac sygnaly problemow z: możliwy wcześniejszy szkodowy/aukcyjny import z USA (brak jednoznacznego opisu historii przed importem). Ukryte ryzyka dotycza: brak informacji o przebiegu, brak wzmianki o serwisie, książce serwisowej, wymianach oleju/eksploatacyjnych części, import z USA – ryzyko wcześniejszego wypadku lub szkody, nawet jeśli obecnie opisany jako nieuszkodzony, modyfikacje (pełny układ wydechowy + strojenie w MotoTune) – możliwa jazda torowa/ostre użytkowanie, oklejenie folią PPF części narażonych na uszkodzenia może maskować drobne rysy lub lakierowanie. Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-k7-stan-perfekcyjny-tuv-z-niemiec-transport-raty-k8-k-7-gsxr-750-CID5-ID19T9XH.html",
+      "title": "Suzuki GSX-R 600 K7 Stan Perfekcyjny TUV Z Niemiec Transport Raty k8 K 7  gsxr 750",
+      "price_pln": 25999,
+      "location": "Górno",
+      "city": "Górno",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Witam, Prezentujemy Suzuki GSXR 600 K7 Z 2007 W STANIE IDEALNYM. LEPSZA JAKOSC ZDJEC PRZEZ SERWIS OTOMOTO [ 25 zdjęć ] Klikając w logo Moto SM wyskoczy cała nasza oferta motocykli. Zaobserwuj Nasze Media Społecznościowe by być na bieżąco z nowymi dostawami. FB: Moto SM PEWNE MOTOCYKLE FIRMA MOTO SM Największy wybór motocykli na kat B lub A1 w Świętokrzyskim. Do wglądu zdjęcia z Transportu motocykli do kraju! Na miejscu Posiadam po kilka szt flagowych modeli najlepszych marek : yamahy MT, YZF, WR, honda cb, cbr, ktm duke, aprilie tuono rs 4. Zajmuje się bezpośrednim importem motocykl z niemiec i austrii. Sprzedajemy 300 szt motocykli rocznie. Mnóstwo zadowolonych klientów. ŚWIETNE OPINIE! Ponad 50szt motocykli na kat B lub A1 Oferujemy transport pod dom, bez wychodzenia z domu. Dokładniejsze zdjęcia w serwisie otomoto lub na życzenie klienta WhatsApp. SUZUKI GSXR R Motocykl Świeżo sprowadzony z niemiec . Stan wizualny bardzo dobry, wszystkie plastiki całe w bardzo ładnym stanie w oryginalnym lakierze, bez rys. Tarcze bez rantów, Opony W BDB STANIE Zawiszenie suche. Bardzo zadbany, garażowany, bez korozji. Niski Przebieg 39000 km potwierdzony TUV Z NIEMIEC. ORAZ ZDJECIA Z DNIA ZAKUPU. Silnik pracuje idealnie, Data pierwszej rejestracji 2007r. Możliwy Transport po wcześniejszym uzgodnienu. Wystawiam faturę VAT marze kupujący zwolniony z opłaty skarbowej. Możliwość obejrzenia 7dni w tygodniu. Możliwość wzięcia na Raty: Opiekun p. KAMILA : Cena do uzgodnienia. Wiecej informacji telefonicznie. 787x384x667",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/346hj2gr17wk-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/346hj2gr17wk-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/cqc7pfb68g331-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/cqc7pfb68g331-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/hpvzvh9723gf2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/hpvzvh9723gf2-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/imwf5ag90muv2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/imwf5ag90muv2-PL/image;s=1068x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/j3hi40jf6pg31-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/me39i6xobhku2-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/pni0nn7jyvw5-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ueh8zvvxqd2w1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ueh8zvvxqd2w1-PL/image;s=1813x1360"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2007,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Niemcy",
+      "seller_type": null,
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Marka": "Suzuki",
+        "Rok produkcji": "2007",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Niemcy"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "bardzo zadbany",
+        "bez korozji",
+        "bez rys",
+        "cena do uzgodnienia",
+        "garażowany",
+        "niski przebieg",
+        "opony w bdb stanie",
+        "przebieg 39000 km potwierdzony TUV",
+        "stan perfekcyjny",
+        "stan wizualny bardzo dobry",
+        "tarcze bez rantów",
+        "w oryginalnym lakierze",
+        "w stanie idealnym",
+        "wszystkie plastiki całe",
+        "zawieszenie suche",
+        "zdjęcia z dnia zakupu",
+        "świeżo sprowadzony z niemiec"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "akcent na bardzo dobry stan wizualny, brak konkretów o serwisie (olej, rozrząd/łańcuch, regulacja zaworów)",
+        "brak informacji o historii serwisowej / książce serwisowej, tylko TUV i zdjęcia",
+        "brak jednoznacznej informacji czy motocykl na pełnej mocy czy zdławiony (A2/DE ograniczenia)",
+        "brak opisu stanu napędu (łańcuch, zębatki) i hamulców poza tarczami",
+        "brak wzmianki o liczbie właścicieli i ewentualnych torowych modyfikacjach/eksploatacji",
+        "cena do uzgodnienia – możliwa duża rozpiętość zależnie od faktycznego stanu na miejscu",
+        "import z niemiec – możliwa wcześniejsza szkoda/naprawa mimo opisu ‚nieuszkodzony’"
+      ],
+      "starts": true,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "bardzo zadbany",
+      "bez korozji",
+      "bez rys",
+      "cena do uzgodnienia",
+      "garażowany",
+      "niski przebieg",
+      "opony w bdb stanie",
+      "przebieg 39000 km potwierdzony TUV",
+      "stan perfekcyjny",
+      "stan wizualny bardzo dobry",
+      "tarcze bez rantów",
+      "w oryginalnym lakierze",
+      "w stanie idealnym",
+      "wszystkie plastiki całe",
+      "zawieszenie suche",
+      "zdjęcia z dnia zakupu",
+      "świeżo sprowadzony z niemiec"
+    ],
+    "severity": "medium",
+    "starts": true,
+    "hidden_risks": [
+      "akcent na bardzo dobry stan wizualny, brak konkretów o serwisie (olej, rozrząd/łańcuch, regulacja zaworów)",
+      "brak informacji o historii serwisowej / książce serwisowej, tylko TUV i zdjęcia",
+      "brak jednoznacznej informacji czy motocykl na pełnej mocy czy zdławiony (A2/DE ograniczenia)",
+      "brak opisu stanu napędu (łańcuch, zębatki) i hamulców poza tarczami",
+      "brak wzmianki o liczbie właścicieli i ewentualnych torowych modyfikacjach/eksploatacji",
+      "cena do uzgodnienia – możliwa duża rozpiętość zależnie od faktycznego stanu na miejscu",
+      "import z niemiec – możliwa wcześniejsza szkoda/naprawa mimo opisu ‚nieuszkodzony’"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 98,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: akcent na bardzo dobry stan wizualny, brak konkretów o serwisie (olej, rozrząd/łańcuch, regulacja zaworów), brak informacji o historii serwisowej / książce serwisowej, tylko TUV i zdjęcia, brak jednoznacznej informacji czy motocykl na pełnej mocy czy zdławiony (A2/DE ograniczenia), brak opisu stanu napędu (łańcuch, zębatki) i hamulców poza tarczami, brak wzmianki o liczbie właścicieli i ewentualnych torowych modyfikacjach/eksploatacji, cena do uzgodnienia – możliwa duża rozpiętość zależnie od faktycznego stanu na miejscu, import z niemiec – możliwa wcześniejsza szkoda/naprawa mimo opisu ‚nieuszkodzony’. Opis sugeruje, ze motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-k6-w-bardzo-dobrym-stanie-serwisowany-miv-transport-CID5-ID19Mkrm.html",
+      "title": "Suzuki GSX-R 600 K6 W Bardzo Dobrym Stanie Serwisowany MIV Transport",
+      "price_pln": 25999,
+      "location": "Kaczanowo",
+      "city": "Kaczanowo",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Ogłoszenie proszę oglądać na OtoMoto! Jest tam dostępny szerszy opis oraz większa ilość zdjęć motocykla. Rok: 2006r Przebieg: 41000 km ( potwierdzony niemieckim TUV ) Typ Motocykla: Sportowy Pojemność: 600 Kategoria prawa jazdy: A Ilość kluczyków: 2 Komplet kluczy serwisowych: Tak Dodatkowe wyposażenie motocykla: - Sportowy wydech MIV - Akcesoryjna nakładka na siedzenie pasażera - Przyciemniana szyba - Crash Pady OPIS: Motocykl bezwypadkowy! Cały w oryginalnym lakierze z oryginalnym potwierdzonym przebiegiem w bardzo dobrym stanie wizualnym jak i technicznym. Motocykl świeżo sprowadzony z Niemiec od prywatnego właściciela. Opony jak i napęd w stanie bardzo dobrym Silnik bez wycieków, pracuje wzorowo Zawieszenie proste oraz suche. Owiewki w ładnym stanie. Motocykl gotowy do jazdy bez wkładu finansowego Jazda próbna możliwa po zostawieniu pełnej kwoty wartości motocykla!! Posiadamy wszystkie dokumenty potrzebne do rejestracji pojazdu. Możliwość przesłania większej ilości zdjęć oraz video prezentacji. Zainteresowanych zapraszamy do kontaktu. Na miejscu duży wybór motocykli. Wystawiam fakturę VAT marża ( kupujący zwolniony z opłaty skarbowej 2% ) Możliwość sprzedaży ratalnej. Opiekun Ratalny Adrian Koclajda Tel- TRANSPORT: Oferujemy transport motocykla pod dom lub w wyznaczone miejsce przez klienta. OGLĘDZINY: Możliwe 7 dni w tygodniu tylko po wcześniejszym umówieniu się! KONTAKT: Nr tel: 5-7-2-2-8-2-6-4-4 Nr tel: 7-9-8-6-9-4-0-4-7",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/5343pfhqmco01-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/5343pfhqmco01-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/f2dqufiblje01-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/gdtfhfdqt8pp-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/gdtfhfdqt8pp-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/kqw86404aykc3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/kqw86404aykc3-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qw95o27mqawa2-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qximb2x1h3hf-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qximb2x1h3hf-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/t04cy63k3cfy-PL/image;s=2040x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ul4fzq1ruhr32-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ul4fzq1ruhr32-PL/image;s=2040x1360"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2006,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Niemcy",
+      "seller_type": null,
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Marka": "Suzuki",
+        "Rok produkcji": "2006",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Niemcy"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "TUV",
+        "bezwypadkowy",
+        "cały w oryginalnym lakierze",
+        "duży wybór motocykli (komis / handlarz)",
+        "faktura VAT marża",
+        "gotowy do jazdy bez wkładu finansowego",
+        "jazda próbna możliwa po zostawieniu pełnej kwoty",
+        "motocykl sprowadzony",
+        "przebieg potwierdzony",
+        "silnik bez wycieków",
+        "stan bardzo dobry",
+        "zawieszenie proste oraz suche",
+        "świeżo sprowadzony z Niemiec"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "brak szczegółów o książce serwisowej, historii wymian (olej, zawory, płyny, łożyska) przy przebiegu 41 000 km",
+        "jazda próbna wyłącznie po zostawieniu pełnej kwoty może utrudniać realne sprawdzenie motocykla",
+        "motocykl z komisu/handlarza (duży wybór motocykli) – typowe ryzyko handlowe: możliwe wcześniejsze szkody lub torowa przeszłość nieujawniona w opisie",
+        "motocykl świeżo sprowadzony – brak długiej historii serwisowej w kraju",
+        "określenie 'stan bardzo dobry' jest subiektywne, brak precyzyjnych danych o pomiarach kompresji, grubości klocków, tarcz itp.",
+        "zapewnienie o bezwypadkowości i oryginalnym lakierze bez twardych dowodów (tylko opis sprzedającego)"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "TUV",
+      "bezwypadkowy",
+      "cały w oryginalnym lakierze",
+      "duży wybór motocykli (komis / handlarz)",
+      "faktura VAT marża",
+      "gotowy do jazdy bez wkładu finansowego",
+      "jazda próbna możliwa po zostawieniu pełnej kwoty",
+      "motocykl sprowadzony",
+      "przebieg potwierdzony",
+      "silnik bez wycieków",
+      "stan bardzo dobry",
+      "zawieszenie proste oraz suche",
+      "świeżo sprowadzony z Niemiec"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "brak szczegółów o książce serwisowej, historii wymian (olej, zawory, płyny, łożyska) przy przebiegu 41 000 km",
+      "jazda próbna wyłącznie po zostawieniu pełnej kwoty może utrudniać realne sprawdzenie motocykla",
+      "motocykl z komisu/handlarza (duży wybór motocykli) – typowe ryzyko handlowe: możliwe wcześniejsze szkody lub torowa przeszłość nieujawniona w opisie",
+      "motocykl świeżo sprowadzony – brak długiej historii serwisowej w kraju",
+      "określenie 'stan bardzo dobry' jest subiektywne, brak precyzyjnych danych o pomiarach kompresji, grubości klocków, tarcz itp.",
+      "zapewnienie o bezwypadkowości i oryginalnym lakierze bez twardych dowodów (tylko opis sprzedającego)"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 96,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: brak szczegółów o książce serwisowej, historii wymian (olej, zawory, płyny, łożyska) przy przebiegu 41 000 km, jazda próbna wyłącznie po zostawieniu pełnej kwoty może utrudniać realne sprawdzenie motocykla, motocykl z komisu/handlarza (duży wybór motocykli) – typowe ryzyko handlowe: możliwe wcześniejsze szkody lub torowa przeszłość nieujawniona w opisie, motocykl świeżo sprowadzony – brak długiej historii serwisowej w kraju, określenie 'stan bardzo dobry' jest subiektywne, brak precyzyjnych danych o pomiarach kompresji, grubości klocków, tarcz itp., zapewnienie o bezwypadkowości i oryginalnym lakierze bez twardych dowodów (tylko opis sprzedającego). Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-suzuki-gsx-r-600-k6-kat-a2-akrapovic-doinwestowany-z-niemiec-zadbany-CID5-ID19QEGj.html",
+      "title": "Suzuki GSX-R Suzuki GSX-R 600 K6 Kat A2 AKRAPOVIĆ Doinwestowany z Niemiec Zadbany",
+      "price_pln": 26900,
+      "location": "Łask",
+      "city": "Łask",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Suzuki GSX-R 600 | 2006 | Kat A2 Na sprzedaż Suzuki GSX-R 600 K-6 Motocykl sprowadzony z Niemiec -Rok 2006 - Przebieg: 33 188 km - Silnik 600 cm³, wtrysk -Wskaźnik biegu - Sportowy układ wydech AKRAPOVIĆ -Przewody hamulcowe w stalowym oplocie - Czarna szyba MRA -Akcesoryjny uchwyt tablicy rejestracyjnej - Napęd w bardzo dobrym stanie -Opony jak nowe Możliwy transport pod dom Zapraszam do kontaktu",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1k6g91ibf51w1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1k6g91ibf51w1-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1ns1z4igynak1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1ns1z4igynak1-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1vmqr78agxpd3-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9jkr0kdj47bw2-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/fakniysd50i22-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/fakniysd50i22-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/n4y34drc9n363-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/n4y34drc9n363-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/oul71j4vc1oh-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/oul71j4vc1oh-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/oyqyvirkqosj1-PL/image;s=1813x1360"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2006,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Niemcy",
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2006",
+        "Poj. silnika": "599 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Niemcy"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "akcesoryjny uchwyt tablicy rejestracyjnej",
+        "czarna szyba MRA",
+        "doinwestowany (w tytule)",
+        "możliwy transport pod dom",
+        "napęd w bardzo dobrym stanie",
+        "opony jak nowe",
+        "przewody hamulcowe w stalowym oplocie",
+        "sportowy układ wydech AKRAPOVIĆ",
+        "sprowadzony z Niemiec",
+        "stan techniczny: nieuszkodzony"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "brak informacji o przeglądzie technicznym/serwisie oleju i regulacji zaworów przy tym przebiegu",
+        "brak wzmianki o bezwypadkowości lub oryginalnym lakierze",
+        "motocykl sprowadzony – brak historii serwisowej z ogłoszenia",
+        "sam opis pozytywny – brak wzmianki o nawet drobnych mankamentach",
+        "tuning (wydech, szyba, uchwyt tablicy) może oznaczać ostrą eksploatację"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "akcesoryjny uchwyt tablicy rejestracyjnej",
+      "czarna szyba MRA",
+      "doinwestowany (w tytule)",
+      "możliwy transport pod dom",
+      "napęd w bardzo dobrym stanie",
+      "opony jak nowe",
+      "przewody hamulcowe w stalowym oplocie",
+      "sportowy układ wydech AKRAPOVIĆ",
+      "sprowadzony z Niemiec",
+      "stan techniczny: nieuszkodzony"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "brak informacji o przeglądzie technicznym/serwisie oleju i regulacji zaworów przy tym przebiegu",
+      "brak wzmianki o bezwypadkowości lub oryginalnym lakierze",
+      "motocykl sprowadzony – brak historii serwisowej z ogłoszenia",
+      "sam opis pozytywny – brak wzmianki o nawet drobnych mankamentach",
+      "tuning (wydech, szyba, uchwyt tablicy) może oznaczać ostrą eksploatację"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 90,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: brak informacji o przeglądzie technicznym/serwisie oleju i regulacji zaworów przy tym przebiegu, brak wzmianki o bezwypadkowości lub oryginalnym lakierze, motocykl sprowadzony – brak historii serwisowej z ogłoszenia, sam opis pozytywny – brak wzmianki o nawet drobnych mankamentach, tuning (wydech, szyba, uchwyt tablicy) może oznaczać ostrą eksploatację. Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-k9-125km-2009r-31tkm-tuv-mega-stan-ixil-oryginal-transport-CID5-ID19ZJO6.html",
+      "title": "Suzuki GSX-R 600 K9 125KM 2009r 31tkm TUV Mega Stan IXIL Oryginał Transport",
+      "price_pln": 26999,
+      "location": "Staszów",
+      "city": "Staszów",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Zapraszam do przejścia na OTOMOTO tam można zobaczyć większą ilość zdjęć. Sprzedam piękne SUZUKI GSX-R 600 K9 z bardzo niskim przebiegiem, całe w oryginale PEŁNA MOC 125KM 31.000km przebiegu - potwierdzony Niemieckimi wydrukami TÜV do samego końca Sprowadzony z Niemiec, kupiony od osoby prywatnej, posiadam zdjęcia z momentu zakupu oraz transportu motocykla (wszystko do wglądu) K9 2009rok produkcji 100% BEZWYPADKOWY 100% BEZKOLIZYJNY Cały w oryginale, każdy plastik okleina od nowości. Silnik oraz wszystkie podzespoły pracują perfekcyjnie Plastiki zachowane w idealnym stanie. Suzuki wygląda i jeździ wzorowo. MOCNO DOINWESTOWANE: -wydech IXIL -regulowane klamki -krótki uchwyt na tablice -tankpad -nakładka na fotel pasażera -przewody hamulcowe w stalowym oplocie Dołączam również w zestawie fotel kierowcy Komplet dokumentów potrzebnych do rejestracji dwa oryginalne kluczyki oraz dokumentacja potwierdzająca przebieg. Wystawiam fakturę vat-marża, kupujący jest zwoniony z opłaty skarbowej. Koszt rejestracji tylko w wydziale komunikacji 120zł. MOTO 55 - Jesteśmy bezpośrednim importerem motocykli z Niemiec, nasza firma istnieje od 2018roku. Wszystkie oferowane przez nas motocykle są w 100% bezwypadkowe, każdy egzemplarz przed zakupem dokładnie sprawdzamy i weryfikujemy jego stan, aby zapewnić jak najwyższy poziom. Istnieje możliwość zakupu motocykla bez wychodzenia z domu z dokładną prezentacją i transportem pod wskazany adres. RATY/KREDYT Możliwość zakupu w systemie ratalnym, dostępne w 15 minut. TRANSPORT Dostarczamy na terenie całej Polski. 26.999zł do negocjacji Zobacz i zaobserwuj nas na Instagramie! https://www.instagram.com/moto55motocykle?igsh=YjQ1azdtb3hwMGNi Zapraszam do kontaktu gsxr 600 750 k6 k7 k8 k9 cbr r6",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4o85ji4zax6h2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4o85ji4zax6h2-PL/image;s=1869x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/6pgt5r3ywgq31-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/6pgt5r3ywgq31-PL/image;s=1871x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/aqefgxz4j63a2-PL/image;s=1600x1200",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/fa8tzwftf2wo-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/fa8tzwftf2wo-PL/image;s=1600x1143",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/lb2p0hfs10pu2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/lb2p0hfs10pu2-PL/image;s=1600x1187",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ojvk1dt9cuqk-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/q6fqmocepe4k2-PL/image;s=1855x1359",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/x3btobmbhljc2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/x3btobmbhljc2-PL/image;s=1593x1125"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2009,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Niemcy",
+      "seller_type": null,
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Marka": "Suzuki",
+        "Rok produkcji": "2009",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Niemcy"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "100% bezkolizyjny",
+        "100% bezwypadkowy",
+        "TÜV do samego końca",
+        "cały w oryginale",
+        "mocno doinwestowane",
+        "motocykl nieuszkodzony (deklaracja)",
+        "plastiki zachowane w idealnym stanie",
+        "sprowadzony z Niemiec",
+        "transport"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "brak informacji o oponach, łańcuchu i zębatkach – możliwe zbliżające się większe wydatki",
+        "brak szczegółowego opisu serwisu (olej, zawieszenie, hamulce) przy roczniku 2009",
+        "liczne modyfikacje (wydech IXIL, krótkie mocowanie tablicy, klamki) mogą sugerować ostrzejszą jazdę",
+        "motocykl sportowy z Niemiec – potencjalnie częsta jazda torowa lub dynamiczna eksploatacja",
+        "możliwy nieujawniony ślizg/parkingówka mimo deklaracji 100% bezwypadkowy"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "100% bezkolizyjny",
+      "100% bezwypadkowy",
+      "TÜV do samego końca",
+      "cały w oryginale",
+      "mocno doinwestowane",
+      "motocykl nieuszkodzony (deklaracja)",
+      "plastiki zachowane w idealnym stanie",
+      "sprowadzony z Niemiec",
+      "transport"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "brak informacji o oponach, łańcuchu i zębatkach – możliwe zbliżające się większe wydatki",
+      "brak szczegółowego opisu serwisu (olej, zawieszenie, hamulce) przy roczniku 2009",
+      "liczne modyfikacje (wydech IXIL, krótkie mocowanie tablicy, klamki) mogą sugerować ostrzejszą jazdę",
+      "motocykl sportowy z Niemiec – potencjalnie częsta jazda torowa lub dynamiczna eksploatacja",
+      "możliwy nieujawniony ślizg/parkingówka mimo deklaracji 100% bezwypadkowy"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 90,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: brak informacji o oponach, łańcuchu i zębatkach – możliwe zbliżające się większe wydatki, brak szczegółowego opisu serwisu (olej, zawieszenie, hamulce) przy roczniku 2009, liczne modyfikacje (wydech IXIL, krótkie mocowanie tablicy, klamki) mogą sugerować ostrzejszą jazdę, motocykl sportowy z Niemiec – potencjalnie częsta jazda torowa lub dynamiczna eksploatacja, możliwy nieujawniony ślizg/parkingówka mimo deklaracji 100% bezwypadkowy. Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-k8-2008r-CID5-ID19Nw11.html?search_reason=search%7Cpromoted",
+      "title": "Suzuki GSX-R 600 k8 2008r",
+      "price_pln": 24900,
+      "location": "Błażowa",
+      "city": "Błażowa",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Witam Mam na sprzedaż Suzuki GSX-R 600 k8 z 2008 roku z przebiegiem 49 tys. Motocykl w pełni gotowy do sezonu , napęd w połowie naciągu , opony bardzo dobre 80 % Cena 24.900 Telefon kontaktowy 733€161#938",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/6zj7rjebcv77-PL/image;s=3000x4000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/8imc6zomnli93-PL/image;s=2000x2667",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9od926vust7v-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9od926vust7v-PL/image;s=3000x4000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/oupdfagfa4h83-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/oupdfagfa4h83-PL/image;s=3000x4000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/thae8xfxdfoj3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/thae8xfxdfoj3-PL/image;s=3000x4000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/w7jpih13zgvy2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/w7jpih13zgvy2-PL/image;s=3000x4000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ytdgtiki2i7l2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ytdgtiki2i7l2-PL/image;s=3000x4000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/zjppdxmr3f2t-PL/image;s=2000x2667"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2008,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Czechy",
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2008",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Czechy"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "kraj pochodzenia: Czechy",
+        "napęd w połowie naciągu",
+        "nieuszkodzony",
+        "opony bardzo dobre 80%",
+        "w pełni gotowy do sezonu"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "brak informacji o serwisie (regulacja zaworów, wymiana płynów, łańcucha rozrządu)",
+        "brak wzmianki o historii wypadkowej, kontrolce FI, luzach w napędzie poza ogólną oceną",
+        "import z Czech – możliwa wcześniejsza szkoda lub torowa przeszłość",
+        "skrótowy opis może ukrywać drobne usterki lub zużycie",
+        "wysoki przebieg jak na sportową 600-tkę – potencjalne zmęczenie silnika i zawieszenia"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "kraj pochodzenia: Czechy",
+      "napęd w połowie naciągu",
+      "nieuszkodzony",
+      "opony bardzo dobre 80%",
+      "w pełni gotowy do sezonu"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "brak informacji o serwisie (regulacja zaworów, wymiana płynów, łańcucha rozrządu)",
+      "brak wzmianki o historii wypadkowej, kontrolce FI, luzach w napędzie poza ogólną oceną",
+      "import z Czech – możliwa wcześniejsza szkoda lub torowa przeszłość",
+      "skrótowy opis może ukrywać drobne usterki lub zużycie",
+      "wysoki przebieg jak na sportową 600-tkę – potencjalne zmęczenie silnika i zawieszenia"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 90,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: brak informacji o serwisie (regulacja zaworów, wymiana płynów, łańcucha rozrządu), brak wzmianki o historii wypadkowej, kontrolce FI, luzach w napędzie poza ogólną oceną, import z Czech – możliwa wcześniejsza szkoda lub torowa przeszłość, skrótowy opis może ukrywać drobne usterki lub zużycie, wysoki przebieg jak na sportową 600-tkę – potencjalne zmęczenie silnika i zawieszenia. Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsxr600-k8-CID5-ID19YMZH.html?search_reason=search%7Cpromoted",
+      "title": "Suzuki Gsxr600 k8",
+      "price_pln": 24000,
+      "location": "Brzeziny",
+      "city": "Brzeziny",
+      "region": null,
+      "short_description": "24 000 zł | do negocjacji",
+      "full_description": "Opis Na sprzedaż Suzuki GSX-R600 K8 z 2008 roku. Motocykl sprowadzony do Polski, pierwsza rejestracja w kraju: 07.03.2019. Użytkowany prywatnie, garażowany, w bardzo dobrym stanie technicznym i wizualnym. Legendarny supersport 600 — lekki, mocny (78 kW) i świetnie prowadzący się motocykl, który daje ogromną frajdę z jazdy. Dane techniczne •\tRok produkcji: 2008 •\tPojemność: 599 cm³ •\tMoc: 78 kW •\tMasa własna: 196 kg •\tLiczba miejsc: 2 •\tPrzebieg: 35 900 km •\tPierwsza rejestracja w PL: 07.03.2019 ⸻ Stan motocykla •\tSilnik pracuje równo, odpala bez problemu •\tSkrzynia biegów i sprzęgło bez zastrzeżeń •\tZawieszenie i hamulce w bardzo dobrym stanie •\tMotocykl zadbany i garażowany •\tOpony w dobrym stanie •\tGotowy do jazdy bez wkładu finansowego ⸻ Dokumenty •\tKomplet dokumentów •\tAktualne OC i przegląd •\tVIN zgodny z dokumentami",
+      "image_urls": [
+        "https://img-resizer.prd.01.eu-west-1.eu.olx.org/img-eu-olxpl-production/1186566371_1_100x100_rev011.jpg",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4yl6n81uwura3-PL/image;s=2000x2667",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/8fyjgn8jybha-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/8fyjgn8jybha-PL/image;s=2000x2667",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/b83lh7lt20z9-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/b83lh7lt20z9-PL/image;s=2000x2667",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/idgun7fgbvua3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/idgun7fgbvua3-PL/image;s=2000x2667",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qz13i4gcs21r-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qz13i4gcs21r-PL/image;s=2000x2667",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/v0nbdmw20dw03-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/v0nbdmw20dw03-PL/image;s=2000x2667"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2008,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Holandia",
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2008",
+        "Poj. silnika": "599 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Holandia"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "VIN zgodny z dokumentami",
+        "garażowany",
+        "gotowy do jazdy bez wkładu finansowego",
+        "komplet dokumentów",
+        "kraj pochodzenia: Holandia",
+        "opony w dobrym stanie",
+        "pierwsza rejestracja w PL 2019",
+        "prywatnie użytkowany",
+        "silnik pracuje równo, odpala bez problemu",
+        "sprowadzony",
+        "stan techniczny: nieuszkodzony",
+        "zawieszenie i hamulce w bardzo dobrym stanie"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "brak informacji o historii serwisowej i książce serwisowej",
+        "brak szczegółów dotyczących wymian eksploatacyjnych (olej, płyny, łańcuch, klocki)",
+        "brak wzmianki o ewentualnych wywrotkach/ślizgach",
+        "motocykl sprowadzony – nieznana historia przed importem",
+        "pierwsza rejestracja w PL dopiero w 2019 – możliwy dłuższy okres postoju lub nieudokumentowane użytkowanie za granicą"
+      ],
+      "starts": true,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "VIN zgodny z dokumentami",
+      "garażowany",
+      "gotowy do jazdy bez wkładu finansowego",
+      "komplet dokumentów",
+      "kraj pochodzenia: Holandia",
+      "opony w dobrym stanie",
+      "pierwsza rejestracja w PL 2019",
+      "prywatnie użytkowany",
+      "silnik pracuje równo, odpala bez problemu",
+      "sprowadzony",
+      "stan techniczny: nieuszkodzony",
+      "zawieszenie i hamulce w bardzo dobrym stanie"
+    ],
+    "severity": "medium",
+    "starts": true,
+    "hidden_risks": [
+      "brak informacji o historii serwisowej i książce serwisowej",
+      "brak szczegółów dotyczących wymian eksploatacyjnych (olej, płyny, łańcuch, klocki)",
+      "brak wzmianki o ewentualnych wywrotkach/ślizgach",
+      "motocykl sprowadzony – nieznana historia przed importem",
+      "pierwsza rejestracja w PL dopiero w 2019 – możliwy dłuższy okres postoju lub nieudokumentowane użytkowanie za granicą"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 86,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: brak informacji o historii serwisowej i książce serwisowej, brak szczegółów dotyczących wymian eksploatacyjnych (olej, płyny, łańcuch, klocki), brak wzmianki o ewentualnych wywrotkach/ślizgach, motocykl sprowadzony – nieznana historia przed importem, pierwsza rejestracja w PL dopiero w 2019 – możliwy dłuższy okres postoju lub nieudokumentowane użytkowanie za granicą. Opis sugeruje, ze motocykl odpala. Ocena ogolna ryzyka: medium."
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsxr-600-k5-CID5-ID19TsHW.html?search_reason=search%7Cpromoted",
+      "title": "Suzuki gsxr 600 k5",
+      "price_pln": 16200,
+      "location": "Trojanów",
+      "city": "Trojanów",
+      "region": null,
+      "short_description": "16 200 zł | do negocjacji",
+      "full_description": "Opis Sprzedam suzuki gsxr 600k5n Motor w 100procentach gotowy do sezonu . Opna tyl 80procent przod takrze . Maly przebieg 35tys.wazne oplaty i przegląd.cena do negocjacij",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9yyup0ev58xc-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9yyup0ev58xc-PL/image;s=1500x2000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/gtrcibum5bv8-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/gtrcibum5bv8-PL/image;s=1500x2000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ixruym3ozqrm1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ixruym3ozqrm1-PL/image;s=1500x2000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/jvw2fstp5rdp1-PL/image;s=1500x2000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/klezof0ozk6x-PL/image;s=2000x1500",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/unmhaa7swvb32-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/unmhaa7swvb32-PL/image;s=1500x2000",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/vl8hvyg4baz01-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/vl8hvyg4baz01-PL/image;s=2000x1500"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2005,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Francja",
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2005",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Francja"
+      }
+    },
+    "damage_analysis": {
+      "found_keywords": [
+        "cena do negocjacji",
+        "gotowy do sezonu",
+        "kraj pochodzenia Francja",
+        "mały przebieg",
+        "opona tył 80 procent",
+        "ważne opłaty i przegląd"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "brak informacji o historii serwisowej i książce serwisowej",
+        "brak wzmianki o ewentualnych wywrotkach/naprawach lakierniczych",
+        "niska szczegółowość opisu – brak danych o łańcuchu, hamulcach, zużyciu sprzęgła",
+        "sprowadzony z Francji – możliwa wcześniejsza szkoda lub torowe użytkowanie"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "detected_damage_signals": [
+      "cena do negocjacji",
+      "gotowy do sezonu",
+      "kraj pochodzenia Francja",
+      "mały przebieg",
+      "opona tył 80 procent",
+      "ważne opłaty i przegląd"
+    ],
+    "severity": "medium",
+    "starts": null,
+    "hidden_risks": [
+      "brak informacji o historii serwisowej i książce serwisowej",
+      "brak wzmianki o ewentualnych wywrotkach/naprawach lakierniczych",
+      "niska szczegółowość opisu – brak danych o łańcuchu, hamulcach, zużyciu sprzęgła",
+      "sprowadzony z Francji – możliwa wcześniejsza szkoda lub torowe użytkowanie"
+    ],
+    "has_meaningful_description": true,
+    "review_priority_score": 84,
+    "analysis_summary": "W opisie nie ma jednoznacznych sygnalow konkretnych uszkodzen. Ukryte ryzyka dotycza: brak informacji o historii serwisowej i książce serwisowej, brak wzmianki o ewentualnych wywrotkach/naprawach lakierniczych, niska szczegółowość opisu – brak danych o łańcuchu, hamulcach, zużyciu sprzęgła, sprowadzony z Francji – możliwa wcześniejsza szkoda lub torowe użytkowanie. Opis nie daje pewnej informacji, czy motocykl odpala. Ocena ogolna ryzyka: medium."
+  }
+]

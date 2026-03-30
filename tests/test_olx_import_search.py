@@ -27,6 +27,16 @@ def test_detect_damaged_listing_uses_simple_keywords():
     assert detect_damaged_listing("GSXR zadbany", "Odpala i jezdzi") is False
 
 
+def test_detect_damaged_listing_handles_negations_and_healthy_phrases():
+    description = (
+        "Stan techniczny motocykla oceniam na bardzo dobry. "
+        "Zero wkładu finansowego. 100% oryginał. "
+        "Nic nie malowane i nie połamane. Bez żadnych uszkodzeń."
+    )
+
+    assert detect_damaged_listing("Sprzedam Suzuki gsxr-600cc L4", description) is False
+
+
 def test_infer_normalized_model_detects_gsxr():
     assert infer_normalized_model("Suzuki gsx r 600", None) == "gsxr"
     assert infer_normalized_model("Honda CBR 600", None) is None

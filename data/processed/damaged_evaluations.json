@@ -1,0 +1,445 @@
+[
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-suzuki-gsxr-r-750-cbr-r6-ninja-CID5-ID18HmRL.html",
+      "title": "Suzuki GSX-R Suzuki GSXR-R 750 (cbr r6 ninja",
+      "price_pln": 22600,
+      "location": "Ostrów Wielkopolski",
+      "city": "Ostrów Wielkopolski",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Przedmiotem ogłoszenia jest motocykl. Suzuki GSXR 750 Rok 2012 Przebieg 77 390 km Motocykl sprowadzony z Niemiec. W motocyklu świeży napęd klocki tarcze przód tył ładne opony 23r. Więcej szczegółów lub zdjęć na email bądź telefonicznie. Możliwość transportu.",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1b5ybvk2o8it2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/1b5ybvk2o8it2-PL/image;s=1919x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/aw6x9klif3ra-PL/image;s=1949x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/e9dvaimj1aza3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/e9dvaimj1aza3-PL/image;s=1487x1359",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qngemx59eda62-PL/image;s=1775x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/r39sxkj5x5sd1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/r39sxkj5x5sd1-PL/image;s=1979x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/t07n4frrriju2-PL/image;s=1813x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/uiqbtedineqz1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/uiqbtedineqz1-PL/image;s=1642x1360",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/zw7yvkwp3zbx1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/zw7yvkwp3zbx1-PL/image;s=1945x1360"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 750,
+      "normalized_model": "gsxr_750",
+      "year": 2014,
+      "technical_state": "Uszkodzony",
+      "origin_country": "Niemcy",
+      "seller_type": "Prywatne",
+      "mentions_600": false,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2014",
+        "Poj. silnika": "750 cm³",
+        "Stan techniczny": "Uszkodzony",
+        "Kraj pochodzenia": "Niemcy"
+      },
+      "classification_reason": "damaged: technical_state=Uszkodzony",
+      "dataset_class": "damaged"
+    },
+    "healthy_market_value": 22500,
+    "comparables_count": 43,
+    "valuation_status": "same_model_fallback",
+    "valuation_confidence": "medium",
+    "generation_hint": null,
+    "matched_same_generation": false,
+    "selected_comparables_strategy": "same_model_fallback",
+    "damage_analysis": {
+      "found_keywords": [
+        "2012",
+        "77 390 km",
+        "Suzuki GSXR 750",
+        "klocki",
+        "możliwość transportu",
+        "sprowadzony z Niemiec",
+        "tarcze przód tył",
+        "ładne opony 23r",
+        "świeży napęd"
+      ],
+      "suspected_damage": [],
+      "hidden_risks": [
+        "high mileage for a sport motorcycle",
+        "imported vehicle history may be incomplete",
+        "no VIN or service history provided",
+        "no explicit statement that the motorcycle starts or runs",
+        "no mention of accident-free status"
+      ],
+      "starts": null,
+      "severity": "medium"
+    },
+    "repair_estimate": {
+      "parts_cost_pln": 0,
+      "labor_cost_pln": 0,
+      "risk_buffer_pln": 500,
+      "total_cost_pln": 500
+    },
+    "expected_profit": -600,
+    "roi_percent": -2.65,
+    "deal_score": 47
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-750-sprowadzony-z-niemiec-1992-pelna-dokumentacja-CID5-ID19FHNf.html?search_reason=search%7Corganic",
+      "title": "Suzuki GSX-R 750 Sprowadzony z Niemiec 1992 Pełna Dokumentacja",
+      "price_pln": 3500,
+      "location": "Wilda",
+      "city": "Wilda",
+      "region": null,
+      "short_description": null,
+      "full_description": "Opis Suzuki GSX-R 750 Sprowadzony z Niemiec 1992 Pełna Dokumentacja Motocykl kręci ale nie odpala gaźniki do wyczyszczenia po zimie Oryginalny stan plus amortyzator skrętu Więcej informacji udzielę telefonicznie",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/4oum3nxgl11b3-PL/image;s=1179x792",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/6g45s10grjya3-PL/image;s=1179x1513",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/er2i50k6zxqw-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/er2i50k6zxqw-PL/image;s=1179x837",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/kil4ol79rpij1-PL/image;s=1179x844",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ml2hgzh56b1o3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ml2hgzh56b1o3-PL/image;s=1179x850",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qy7q3iibo4qq-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qy7q3iibo4qq-PL/image;s=1179x839",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/wou7e1iwpnn42-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/wou7e1iwpnn42-PL/image;s=1179x797",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/x9nih3fknkzu1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/x9nih3fknkzu1-PL/image;s=1179x852"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 750,
+      "normalized_model": "gsxr_750",
+      "year": 1992,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": "Niemcy",
+      "seller_type": "Prywatne",
+      "mentions_600": false,
+      "looks_damaged": true,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "1992",
+        "Poj. silnika": "750 cm³",
+        "Stan techniczny": "Nieuszkodzony",
+        "Kraj pochodzenia": "Niemcy"
+      },
+      "classification_reason": "damaged: keyword=nie odpala",
+      "dataset_class": "damaged"
+    },
+    "healthy_market_value": 22500,
+    "comparables_count": 43,
+    "valuation_status": "same_model_fallback",
+    "valuation_confidence": "medium",
+    "generation_hint": null,
+    "matched_same_generation": false,
+    "selected_comparables_strategy": "same_model_fallback",
+    "damage_analysis": {
+      "found_keywords": [
+        "1992",
+        "amortyzator skrętu",
+        "gaźniki do wyczyszczenia po zimie",
+        "kręci ale nie odpala",
+        "oryginalny stan",
+        "pełna dokumentacja",
+        "sprowadzony z Niemiec"
+      ],
+      "suspected_damage": [
+        "możliwy problem z układem paliwowym lub gaźnikami",
+        "nie odpala"
+      ],
+      "hidden_risks": [
+        "długi postój po zimie mógł wpłynąć na paliwo, akumulator i układ paliwowy",
+        "motocykl importowany, możliwa nieznana historia serwisowa lub użytkowania",
+        "sprzedający minimalizuje problem do czyszczenia gaźników, ale przyczyna braku rozruchu może być poważniejsza"
+      ],
+      "starts": false,
+      "severity": "medium"
+    },
+    "repair_estimate": {
+      "parts_cost_pln": 0,
+      "labor_cost_pln": 0,
+      "risk_buffer_pln": 2500,
+      "total_cost_pln": 2500
+    },
+    "expected_profit": 16500,
+    "roi_percent": 471.43,
+    "deal_score": 83
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-k2-2002-k1-k2-k3-CID5-ID19U29Q.html?search_reason=search%7Corganic",
+      "title": "Suzuki GSX-R 600 K2 2002 K1 K2 k3",
+      "price_pln": 7000,
+      "location": "Krzyki",
+      "city": "Krzyki",
+      "region": null,
+      "short_description": "7 000 zł",
+      "full_description": "Opis Na sprzedaż Suzuki GSX-R 600 K2 z 2002 roku. Motocykl w dobrym stanie mechanicznym, silnik pracuje bardzo dobrze – równo, bez niepokojących dźwięków. Skrzynia biegów działa płynnie, wszystkie biegi wchodzą bez zgrzytów. Co zostało zrobione / nowe części: opony dużo muesa zrobione na nich może z 500km z 2022 i 2023 nowe tarcze hamulcowe przód nowe klocki hamulcowe przód nowe przewody hamulcowe w stalowym oplocie (wersja sport – osobno na każdą stronę) pompa hamulcowa po regeneracji wymieniona główka ramy Hamulce w bardzo dobrej kondycji hamuje „jak brzytwa”. Rzeczy do ogarnięcia: lagi po regeneracji (uszczelniacze, panewki wymienione), natomiast lagi nie były polerowane – przez to uszczelniacze nie zbierają idealnie oleju (nie ma wycieków, ale nie jest 100%) uszkodzone mocowanie licznika i lampy pęknięta czasza– efekt wywrotki przy małej prędkości (śliska nawierzchnia na stacji benzynowej przy dystrybutorze) akumulator do wymiany Stan techniczny: silnik bardzo zdrowy, odpala bez problemu pracuje równo, ma moc skrzynia i sprzęgło bez zastrzeżeń Motocykl idealny dla kogoś, kto chce dobrą bazę – dużo rzeczy już zrobione, zostały głównie detale do dopracowania. Więcej informacji udzielę telefonicznie.",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/13bubxxjw9hf1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/13bubxxjw9hf1-PL/image;s=1160x653",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/3acc9kmdn9kq1-PL/image;s=653x1160",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9wt5jumo3gtn2-PL/image;s=1160x653",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/cijtq67xpzae-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/cijtq67xpzae-PL/image;s=1160x653",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/hxi918i4yt2t3-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/hxi918i4yt2t3-PL/image;s=1160x653",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ii2km7xfpt1i1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/ii2km7xfpt1i1-PL/image;s=1160x653",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/m1yj02wtnj8a2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/m1yj02wtnj8a2-PL/image;s=653x1160",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/m6mwbesa8sh11-PL/image;s=653x1160"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2002,
+      "technical_state": "Uszkodzony",
+      "origin_country": null,
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": true,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2002",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Uszkodzony"
+      },
+      "classification_reason": "damaged: technical_state=Uszkodzony",
+      "dataset_class": "damaged"
+    },
+    "healthy_market_value": 11350,
+    "comparables_count": 2,
+    "valuation_status": "same_generation_same_model",
+    "valuation_confidence": "low",
+    "generation_hint": "k2",
+    "matched_same_generation": true,
+    "selected_comparables_strategy": "same_generation_same_model",
+    "damage_analysis": {
+      "found_keywords": [
+        "akumulator do wymiany",
+        "dobrym stanie mechanicznym",
+        "efekt wywrotki przy małej prędkości",
+        "lagi po regeneracji",
+        "nowe klocki hamulcowe przód",
+        "nowe przewody hamulcowe w stalowym oplocie",
+        "nowe tarcze hamulcowe przód",
+        "odpala bez problemu",
+        "pompa hamulcowa po regeneracji",
+        "pęknięta czasza",
+        "równo, bez niepokojących dźwięków",
+        "silnik pracuje bardzo dobrze",
+        "skrzynia biegów działa płynnie",
+        "uszkodzone mocowanie licznika i lampy",
+        "wszystkie biegi wchodzą bez zgrzytów",
+        "wymieniona główka ramy"
+      ],
+      "suspected_damage": [
+        "akumulator do wymiany",
+        "lagi nie były polerowane, uszczelniacze nie zbierają idealnie oleju",
+        "pęknięta czasza",
+        "uszkodzone mocowanie licznika i lampy",
+        "ślady wywrotki przy małej prędkości"
+      ],
+      "hidden_risks": [
+        "akumulator do wymiany może maskować problemy z ładowaniem lub instalacją elektryczną",
+        "lagi po regeneracji nadal nie są w pełni sprawne, możliwe przyszłe wycieki lub konieczność dalszej naprawy",
+        "wymieniona główka ramy może sugerować wcześniejsze mocniejsze uszkodzenie przodu lub ramy",
+        "wywrotka mogła spowodować dodatkowe niewidoczne uszkodzenia mocowań, lag, półek lub owiewek"
+      ],
+      "starts": true,
+      "severity": "medium"
+    },
+    "repair_estimate": {
+      "parts_cost_pln": 0,
+      "labor_cost_pln": 0,
+      "risk_buffer_pln": 500,
+      "total_cost_pln": 500
+    },
+    "expected_profit": 3850,
+    "roi_percent": 55.0,
+    "deal_score": 52
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-600-k2-CID5-ID1a0OWd.html?search_reason=search%7Corganic",
+      "title": "Suzuki GSX-R 600 K2",
+      "price_pln": 7800,
+      "location": "Sośnica",
+      "city": "Sośnica",
+      "region": null,
+      "short_description": "7 800 zł | do negocjacji",
+      "full_description": "Opis Do sprzedania posiadam Suzuki GSX-R 600 2002r. Motocykl jeździ i hamuje pali od strzała. Na ten moment do zrobiona serwis olejowo-filtrowy i do wymiany opona przód ze względu na jej wiek ( nie jest sparciała czy \"twarda\"). Motocykl posiada nową szybe przednia(stara była strasznie porysowana) akcesoryjne klamki łamane, opona tył stan idealny 24r, nowy napęd przejechane niecałe 50 km. akcesoryjny wydech Dominator (dodatkowo dokładam na żczenie 4 inne wydechy), akumulator był kupiony 24r AGM. przegieg motocykla to 80k Wszystkie owiewki są ORYGINALNE i oczywiście jak na sprzet który ma 24 lata noszą ślady użytkowania ale nie są połamane czy lepione. Mała wgniotka na baku z prawej strony motocykl sie przewórcił w garązu (owiewki nie ucierpiały, nie był to szlif) Oc: do maja 26 Pt: na rok Motoyckl jest zarejestrowany na mnie w PL. Osobą które spodziewaja się stanu \"igła\" po takim motocyklu dziękuję tym bardziej za taką cene. Sprzedaje bo wyjeżdzam za granice.",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/068kbb0x47b92-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/068kbb0x47b92-PL/image;s=2000x1500",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/06oybmadcj272-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/06oybmadcj272-PL/image;s=3060x4080",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/2lehm54wuqaa2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/2lehm54wuqaa2-PL/image;s=4080x3060",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9ffat4ebjq1k1-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/9ffat4ebjq1k1-PL/image;s=3060x4080",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/m9qby564np2r2-PL/image;s=3060x4080",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qu26qpl58uka-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/qu26qpl58uka-PL/image;s=4080x3060"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 2002,
+      "technical_state": "Nieuszkodzony",
+      "origin_country": null,
+      "seller_type": "Prywatne",
+      "mentions_600": true,
+      "looks_damaged": false,
+      "attributes": {
+        "Typ ogloszeniodawcy": "Prywatne",
+        "Marka": "Suzuki",
+        "Rok produkcji": "2002",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Nieuszkodzony"
+      },
+      "classification_reason": "damaged: keyword=połamane",
+      "dataset_class": "damaged"
+    },
+    "healthy_market_value": 11350,
+    "comparables_count": 2,
+    "valuation_status": "same_generation_same_model",
+    "valuation_confidence": "low",
+    "generation_hint": "k2",
+    "matched_same_generation": true,
+    "selected_comparables_strategy": "same_generation_same_model",
+    "damage_analysis": {
+      "found_keywords": [
+        "akcesoryjne klamki łamane",
+        "akcesoryjny wydech Dominator",
+        "akumulator AGM 24r",
+        "do wymiany opona przód",
+        "jeździ i hamuje",
+        "mała wgniotka na baku",
+        "nie był to szlif",
+        "nowa szyba przednia",
+        "nowy napęd",
+        "opona tył stan idealny 24r",
+        "oryginalne owiewki",
+        "owiewki nie ucierpiały",
+        "pali od strzała",
+        "przebieg 80k",
+        "przewrócił się w garażu",
+        "serwis olejowo-filtrowy do zrobienia",
+        "zarejestrowany w PL",
+        "ślady użytkowania"
+      ],
+      "suspected_damage": [
+        "mała wgniotka na baku z prawej strony",
+        "motocykl przewrócił się w garażu",
+        "ślady użytkowania na owiewkach"
+      ],
+      "hidden_risks": [
+        "akcesoryjny wydech i klamki mogą sugerować modyfikacje lub wcześniejsze zdarzenia",
+        "po przewróceniu możliwe ukryte uszkodzenia",
+        "przednia opona do wymiany ze względu na wiek",
+        "wymagany serwis olejowo-filtrowy",
+        "wysoki przebieg 80k"
+      ],
+      "starts": true,
+      "severity": "medium"
+    },
+    "repair_estimate": {
+      "parts_cost_pln": 0,
+      "labor_cost_pln": 0,
+      "risk_buffer_pln": 500,
+      "total_cost_pln": 500
+    },
+    "expected_profit": 3050,
+    "roi_percent": 39.1,
+    "deal_score": 49
+  },
+  {
+    "original_listing": {
+      "url": "https://www.olx.pl/d/oferta/suzuki-gsx-r-srad-600-CID5-ID19YYAb.html?search_reason=search%7Corganic",
+      "title": "Suzuki GSX-R  Srad 600",
+      "price_pln": 1700,
+      "location": "Świdnik",
+      "city": "Świdnik",
+      "region": null,
+      "short_description": "1 700 zł | do negocjacji",
+      "full_description": "Opis Sprzedam motocykl Suzuki GSX-R  SRAD 600. Uszkodzona Pompa paliwa, silnik odpala po podaniu paliwa bezpośrednio do gaźników. Wizualnie wygląda jak na zdjęciach. Przebieg 30 000. Ubezpieczenie OC ważne do 15-05-2026. Brak przeglądu technicznego.",
+      "image_urls": [
+        "https://ireland.apollo.olxcdn.com:443/v1/files/atgdbz6tyxh81-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/atgdbz6tyxh81-PL/image;s=2000x1126",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/cteeiozvnth11-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/cteeiozvnth11-PL/image;s=2000x1126",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/dc9uohxs7tr72-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/dc9uohxs7tr72-PL/image;s=2000x1126",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/pto7d5wxel5k3-PL/image;s=2000x1126",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/v04d0jpzz23c2-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/v04d0jpzz23c2-PL/image;s=2000x1126",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/woft6ay51hm02-PL/image",
+        "https://ireland.apollo.olxcdn.com:443/v1/files/woft6ay51hm02-PL/image;s=2000x1126"
+      ],
+      "brand": "Suzuki",
+      "model_family": "gsxr",
+      "engine_cc": 600,
+      "normalized_model": "gsxr_600",
+      "year": 1999,
+      "technical_state": "Uszkodzony",
+      "origin_country": null,
+      "seller_type": null,
+      "mentions_600": true,
+      "looks_damaged": true,
+      "attributes": {
+        "Marka": "Suzuki",
+        "Rok produkcji": "1999",
+        "Poj. silnika": "600 cm³",
+        "Stan techniczny": "Uszkodzony"
+      },
+      "classification_reason": "damaged: technical_state=Uszkodzony",
+      "dataset_class": "damaged"
+    },
+    "healthy_market_value": 7000,
+    "comparables_count": 8,
+    "valuation_status": "same_model_year_window",
+    "valuation_confidence": "high",
+    "generation_hint": null,
+    "matched_same_generation": false,
+    "selected_comparables_strategy": "same_model_year_window",
+    "damage_analysis": {
+      "found_keywords": [
+        "OC ważne do 15-05-2026",
+        "Uszkodzona pompa paliwa",
+        "brak przeglądu technicznego",
+        "przebieg 30 000",
+        "silnik odpala po podaniu paliwa bezpośrednio do gaźników"
+      ],
+      "suspected_damage": [
+        "możliwy problem z układem paliwowym",
+        "uszkodzona pompa paliwa"
+      ],
+      "hidden_risks": [
+        "brak ważnego przeglądu technicznego",
+        "motocykl nie jest w pełni sprawny do normalnego uruchamiania",
+        "stan wizualny i ewentualne inne uszkodzenia nieopisane szczegółowo"
+      ],
+      "starts": true,
+      "severity": "medium"
+    },
+    "repair_estimate": {
+      "parts_cost_pln": 0,
+      "labor_cost_pln": 0,
+      "risk_buffer_pln": 500,
+      "total_cost_pln": 500
+    },
+    "expected_profit": 4800,
+    "roi_percent": 282.35,
+    "deal_score": 84
+  }
+]

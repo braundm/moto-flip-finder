@@ -30,6 +30,37 @@ DAMAGED_KEYWORDS = [
     "bez prawa",
 ]
 
+NEGATION_PATTERNS = [
+    re.compile(r"\bnieuszkodzony\b", re.IGNORECASE),
+    re.compile(r"\bnie uszkodzony\b", re.IGNORECASE),
+    re.compile(r"\bbez uszkodzeń\b", re.IGNORECASE),
+    re.compile(r"\bbez żadnych uszkodzeń\b", re.IGNORECASE),
+    re.compile(r"\bbez uszkodzen\b", re.IGNORECASE),
+    re.compile(r"\bbez żadnych uszkodzen\b", re.IGNORECASE),
+    re.compile(r"\bnie połamane\b", re.IGNORECASE),
+    re.compile(r"\bnie połamany\b", re.IGNORECASE),
+    re.compile(r"\bnie krzywy\b", re.IGNORECASE),
+    re.compile(r"\bnie po dzwonie\b", re.IGNORECASE),
+    re.compile(r"\b100%\s*oryginał\b", re.IGNORECASE),
+    re.compile(r"\b100%\s*oryginal\b", re.IGNORECASE),
+    re.compile(r"\bzero wkładu finansowego\b", re.IGNORECASE),
+    re.compile(r"\bzero wkładu\b", re.IGNORECASE),
+    re.compile(r"\bstan bardzo dobry\b", re.IGNORECASE),
+]
+
+POSITIVE_DAMAGE_PATTERNS = [
+    (re.compile(r"\buszkodzony\b", re.IGNORECASE), "uszkodzony"),
+    (re.compile(r"\buszkodzona\b", re.IGNORECASE), "uszkodzona"),
+    (re.compile(r"\bpo szlifie\b", re.IGNORECASE), "po szlifie"),
+    (re.compile(r"\bpo dzwonie\b", re.IGNORECASE), "po dzwonie"),
+    (re.compile(r"\bdo naprawy\b", re.IGNORECASE), "do naprawy"),
+    (re.compile(r"\bnie odpala\b", re.IGNORECASE), "nie odpala"),
+    (re.compile(r"\brozbit\b", re.IGNORECASE), "rozbit"),
+    (re.compile(r"\bkrzywy\b", re.IGNORECASE), "krzywy"),
+    (re.compile(r"\bpołamane\b", re.IGNORECASE), "połamane"),
+    (re.compile(r"\bpołamany\b", re.IGNORECASE), "połamany"),
+]
+
 
 @dataclass
 class OlxSearchRecord:
@@ -54,8 +85,18 @@ def detect_gsxr_600(title: str | None, description: str | None) -> bool:
 
 
 def detect_damaged_listing(title: str | None, description: str | None) -> bool:
-    combined = " ".join(part for part in [title, description] if part).lower()
-    return any(keyword in combined for keyword in DAMAGED_KEYWORDS)
+    return find_damage_keyword(title, description) is not None
+
+
+def find_damage_keyword(title: str | None, description: str | None) -> str | None:
+    combined = " ".join(part for part in [title, description] if part)
+    sanitized = _remove_negated_damage_phrases(combined)
+
+    for pattern, keyword in POSITIVE_DAMAGE_PATTERNS:
+        if pattern.search(sanitized):
+            return keyword
+
+    return None
 
 
 def infer_normalized_model(title: str | None, description: str | None) -> str | None:
@@ -63,6 +104,13 @@ def infer_normalized_model(title: str | None, description: str | None) -> str | 
     if "gsxr" in combined:
         return "gsxr"
     return None
+
+
+def _remove_negated_damage_phrases(text: str) -> str:
+    sanitized = text
+    for pattern in NEGATION_PATTERNS:
+        sanitized = pattern.sub(" ", sanitized)
+    return sanitized.lower()
 
 
 def fetch_olx_search_page(search_url: str, timeout: int = 30) -> str:
