@@ -4,7 +4,12 @@ from abc import ABC, abstractmethod
 import json
 import os
 
+from dotenv import load_dotenv
+
 from .models import DamageAnalysis
+
+
+load_dotenv()
 
 
 class DescriptionAnalysisProvider(ABC):
@@ -54,11 +59,14 @@ class OpenAIDescriptionAnalysisProvider(DescriptionAnalysisProvider):
                 },
             ],
         )
-        payload = json.loads(response.output_text)
+        payload = _extract_response_payload(response)
         return damage_analysis_from_payload(payload)
 
 
-def damage_analysis_from_payload(payload: dict) -> DamageAnalysis:
+def damage_analysis_from_payload(payload: object) -> DamageAnalysis:
+    if not isinstance(payload, dict):
+        raise ValueError("OpenAI response payload must be a JSON object")
+
     found_keywords = _normalize_string_list(payload.get("found_keywords"))
     suspected_damage = _normalize_string_list(payload.get("suspected_damage"))
     hidden_risks = _normalize_string_list(payload.get("hidden_risks"))
@@ -90,3 +98,19 @@ def _normalize_string_list(value: object) -> list[str]:
             normalized.append(item.strip())
 
     return sorted(set(normalized))
+
+
+def _extract_response_payload(response: object) -> dict:
+    output_text = getattr(response, "output_text", None)
+    if not isinstance(output_text, str) or not output_text.strip():
+        raise ValueError("OpenAI response did not contain JSON text")
+
+    try:
+        payload = json.loads(output_text)
+    except json.JSONDecodeError as exc:
+        raise ValueError("OpenAI response was not valid JSON") from exc
+
+    if not isinstance(payload, dict):
+        raise ValueError("OpenAI response JSON must be an object")
+
+    return payload

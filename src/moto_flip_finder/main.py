@@ -32,3 +32,6 @@ def main():
         print("Starts:", evaluation.damage_analysis.starts)
         print("Pearl:", evaluation.is_pearl)
         print("Score:", evaluation.score)
+        
+if __name__ == "__main__":
+    main()

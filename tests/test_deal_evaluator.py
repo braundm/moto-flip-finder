@@ -20,4 +20,4 @@ def test_evaluate_listing():
 
     assert evaluation.healthy_market_value_pln == 29000
     assert evaluation.repair_estimate.total_cost_pln > 0
-    assert isinstance(evaluation.expected_jakiprofit_pln, int)
+    assert isinstance(evaluation.expected_profit_pln, int)

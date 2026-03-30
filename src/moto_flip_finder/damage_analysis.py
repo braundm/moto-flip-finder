@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import sys
 
 from .description_analysis_provider import (
     DescriptionAnalysisProvider,
@@ -117,9 +118,28 @@ def analyze_description(
     selected_provider = provider or get_description_analysis_provider()
 
     try:
-        return selected_provider.analyze(text)
+        analysis = selected_provider.analyze(text)
+        _emit_analysis_debug(_provider_mode_name(selected_provider))
+        return analysis
     except Exception:
         if isinstance(selected_provider, HeuristicDescriptionAnalysisProvider):
             raise
 
-        return HeuristicDescriptionAnalysisProvider().analyze(text)
+        analysis = HeuristicDescriptionAnalysisProvider().analyze(text)
+        _emit_analysis_debug("heuristic-fallback")
+        return analysis
+
+
+def _provider_mode_name(provider: DescriptionAnalysisProvider) -> str:
+    if isinstance(provider, OpenAIDescriptionAnalysisProvider):
+        return "openai"
+
+    if isinstance(provider, HeuristicDescriptionAnalysisProvider):
+        return "heuristic"
+
+    return provider.__class__.__name__
+
+
+def _emit_analysis_debug(mode: str) -> None:
+    if os.getenv("MOTO_FLIP_FINDER_ANALYSIS_DEBUG") == "1":
+        print(f"[damage_analysis] provider={mode}", file=sys.stderr)
