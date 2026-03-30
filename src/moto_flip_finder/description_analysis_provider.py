@@ -1,15 +1,16 @@
 from __future__ import annotations
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+
 from abc import ABC, abstractmethod
 import json
 import os
 
-from dotenv import load_dotenv
-
 from .models import DamageAnalysis
-
-
-load_dotenv()
 
 
 class DescriptionAnalysisProvider(ABC):
@@ -114,3 +115,4 @@ def _extract_response_payload(response: object) -> dict:
         raise ValueError("OpenAI response JSON must be an object")
 
     return payload
+

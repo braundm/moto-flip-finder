@@ -3,7 +3,10 @@ from moto_flip_finder.damage_analysis import (
     analyze_description,
 )
 from moto_flip_finder.models import DamageAnalysis
-from moto_flip_finder.description_analysis_provider import damage_analysis_from_payload
+from moto_flip_finder.description_analysis_provider import (
+    _extract_response_payload,
+    damage_analysis_from_payload,
+)
 
 
 def test_analyze_description_uses_heuristics_without_openai_key(monkeypatch):
@@ -126,3 +129,46 @@ def test_damage_analysis_from_payload_rejects_non_object_payload():
         assert str(exc) == "OpenAI response payload must be a JSON object"
     else:
         raise AssertionError("Expected ValueError for non-object payload")
+
+
+def test_damage_analysis_from_payload_normalizes_damage_names_and_severity():
+    analysis = damage_analysis_from_payload(
+        {
+            "found_keywords": ["szlif", "owiewka"],
+            "suspected_damage": ["fairing", "mirror", "unknown-part", "rims"],
+            "hidden_risks": ["front fork", "chassis", "bad-item"],
+            "starts": "maybe",
+            "severity": "CRITICAL",
+        }
+    )
+
+    assert analysis.found_keywords == ["owiewka", "szlif"]
+    assert analysis.suspected_damage == ["fairings", "mirror", "wheel"]
+    assert analysis.hidden_risks == ["forks", "frame"]
+    assert analysis.starts is None
+    assert analysis.severity == "unknown"
+
+
+def test_extract_response_payload_rejects_invalid_json():
+    class FakeResponse:
+        output_text = "{not-json}"
+
+    try:
+        _extract_response_payload(FakeResponse())
+    except ValueError as exc:
+        assert str(exc) == "OpenAI response was not valid JSON"
+    else:
+        raise AssertionError("Expected ValueError for invalid JSON")
+
+
+def test_extract_response_payload_emits_raw_json_debug(monkeypatch, capsys):
+    class FakeResponse:
+        output_text = '{"severity":"low"}'
+
+    monkeypatch.setenv("MOTO_FLIP_FINDER_ANALYSIS_DEBUG", "1")
+
+    payload = _extract_response_payload(FakeResponse())
+
+    captured = capsys.readouterr()
+    assert payload == {"severity": "low"}
+    assert captured.err.strip() == '[damage_analysis] raw_json={"severity":"low"}'

@@ -1,53 +1,126 @@
 # moto-flip-finder
 
-AI-assisted system for identifying undervalued damaged motorcycles from classifieds by estimating repair cost, market value, and potential flip profit.
+`moto-flip-finder` helps evaluate damaged motorcycle listings by parsing listing data, analyzing the description, estimating repair cost, and scoring flip potential.
 
-## Problem
+## Current scope
 
-Damaged motorcycle listings are difficult to evaluate quickly.  
-This project aims to collect listings, analyze visible damage from photos and text, estimate repair cost, compare the asking price with healthy market value, and rank the best flip opportunities.
+The current MVP works on sample listing data and produces:
 
-## Planned pipeline
-
-1. Collect damaged motorcycle listings
-2. Extract title, description, price, and images
-3. Analyze listing text and photos
-4. Estimate likely damage and repair cost
-5. Compare with healthy market value
-6. Score potential profitability
-7. Rank the best opportunities
-
-## Example output
-
-Each listing should produce a structured result such as:
-
-- listing price
-- estimated repair cost
-- estimated healthy market value
+- parsed listing data
+- normalized damage analysis
+- repair cost estimate
 - expected profit
-- risk level
-- final flip score
+- flip score
 
-## Tech stack
+Description analysis uses:
 
-- Python
-- Web scraping / data collection
-- Vision LLM API for damage analysis
-- Rule-based scoring and valuation
-- JSON / CSV / database storage
+- `OpenAI` when `OPENAI_API_KEY` is available
+- heuristic analysis when no API key is configured
+- heuristic fallback when an OpenAI request fails at runtime
 
-## Project status
+## Project layout
 
-Early development.  
-The repository is currently focused on architecture, data models, pipeline design, and MVP implementation.
+- `src/moto_flip_finder/parser.py`: listing parsing
+- `src/moto_flip_finder/damage_analysis.py`: provider selection and heuristic fallback
+- `src/moto_flip_finder/description_analysis_provider.py`: OpenAI description analysis
+- `src/moto_flip_finder/repair_estimator.py`: repair cost estimation
+- `src/moto_flip_finder/deal_evaluator.py`: final deal evaluation
+- `src/moto_flip_finder/main.py`: CLI-style local run on sample data
 
-## Roadmap
+## Setup
 
-- [ ] Define listing data model
-- [ ] Build single-listing parser
-- [ ] Download and store listing images
-- [ ] Add damage analysis module
-- [ ] Add repair cost estimator
-- [ ] Add healthy market price comparison
-- [ ] Add profit scoring
-- [ ] Add ranked results output
+Create a virtual environment and install dependencies:
+
+```bash
+python -m venv .venv
+.venv/bin/pip install -e .
+```
+
+## Environment
+
+Copy `.env.example` to `.env` and fill in your OpenAI key:
+
+```bash
+cp .env.example .env
+```
+
+Expected variables:
+
+```env
+OPENAI_API_KEY=your_key_here
+OPENAI_MODEL=gpt-4.1-mini
+```
+
+## Run the program
+
+Run from the project root:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m moto_flip_finder.main
+```
+
+## Debug provider selection
+
+To see which description-analysis provider was used:
+
+```bash
+MOTO_FLIP_FINDER_ANALYSIS_DEBUG=1 PYTHONPATH=src .venv/bin/python -m moto_flip_finder.main
+```
+
+You will see exactly one provider line on `stderr` for each analysis:
+
+- `provider=openai`
+- `provider=heuristic`
+- `provider=heuristic-fallback`
+
+When debug is enabled and OpenAI is used, the raw AI JSON is also printed to `stderr` as:
+
+```text
+[damage_analysis] raw_json={...}
+```
+
+## OpenAI output contract
+
+The OpenAI description-analysis integration is constrained to the existing repair estimator model.
+
+Allowed normalized damage names:
+
+- `fairings`
+- `lever`
+- `mirror`
+- `footpeg`
+- `tank`
+- `wheel`
+- `exhaust`
+- `forks`
+- `frame`
+- `swingarm`
+
+Allowed severity values:
+
+- `low`
+- `medium`
+- `high`
+- `unknown`
+
+The returned Python object remains the existing `DamageAnalysis` model.
+
+## Tests
+
+Run focused tests:
+
+```bash
+PYTHONPATH=src .venv/bin/pytest -q tests/test_damage_analysis.py tests/test_repair_estimator.py
+```
+
+The current tests cover:
+
+- heuristic mode without API key
+- OpenAI provider selection when API key is present
+- fallback to heuristics on provider failure
+- payload normalization
+- invalid payload handling
+
+## Status
+
+This is still an MVP. The current repository is centered on local evaluation flow and OpenAI-backed description analysis, not yet on full scraping or photo analysis.
