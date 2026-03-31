@@ -1,0 +1,207 @@
+from moto_flip_finder.price_model import (
+    detect_model_family,
+    detect_model_hint,
+    predict_price,
+    score_records_with_price_model,
+    train_price_model,
+)
+from moto_flip_finder.train_ready_price_model import filter_training_records
+
+
+def _healthy_record(index: int, *, model: str = "gsxr_600", engine_cc: int = 600) -> dict:
+    year = 2005 + (index % 8)
+    base_price = 12000 + (year - 2005) * 700
+    if model == "gsxr_750":
+        base_price += 3000
+    if model == "gsxr_1000":
+        base_price += 6000
+    return {
+        "url": f"https://example.com/{model}/{index}",
+        "title": f"Suzuki {model} K{index % 9}",
+        "full_description": "Zadbany motocykl z normalnym przebiegiem i serwisem.",
+        "image_urls": ["https://example.com/image.jpg"] * (3 + index % 3),
+        "brand": "Suzuki",
+        "seller_type": "Prywatne" if index % 2 == 0 else "Firma",
+        "origin_country": "Polska" if index % 3 == 0 else "Niemcy",
+        "normalized_model": model,
+        "engine_cc": engine_cc,
+        "year": year,
+        "price_pln": base_price,
+    }
+
+
+def _ready_kawasaki_record(
+    index: int,
+    *,
+    family: str = "versys",
+    engine_cc: int = 650,
+    title: str | None = None,
+    full_description: str | None = None,
+    price_pln: int | None = None,
+) -> dict:
+    year = 2008 + (index % 10)
+    base_price = price_pln if price_pln is not None else 15000 + (year - 2008) * 800
+    if family == "ninja" and price_pln is None:
+        base_price += 2500
+    if family == "z" and price_pln is None:
+        base_price += 7000
+    return {
+        "url": f"https://example.com/kawasaki/{family}/{index}",
+        "title": title or f"Kawasaki {family.title()} {engine_cc}",
+        "full_description": full_description or "Zadbany Kawasaki, serwisowany, gotowy do sezonu.",
+        "image_urls": ["https://example.com/image.jpg"] * (2 + index % 4),
+        "brand": "Kawasaki",
+        "seller_type": "Prywatne",
+        "origin_country": "Polska" if index % 2 == 0 else "Niemcy",
+        "vehicle_type": "motorcycle",
+        "technical_state": "Nieuszkodzony",
+        "engine_cc": engine_cc,
+        "year": year,
+        "mileage_km": 15000 + index * 200,
+        "negotiable": index % 3 == 0,
+        "price_pln": base_price,
+    }
+
+
+def test_detect_model_hint_normalizes_kawasaki_variants():
+    assert detect_model_hint("Kawasaki Ninja 1000sx 2020", None, "Kawasaki") == "z1000sx"
+    assert detect_model_hint("Kawasaki ZX-4RR", None, "Kawasaki") == "zx4rr"
+    assert detect_model_hint("Kawasaki Z 900 RS", None, "Kawasaki") == "z900rs"
+    assert detect_model_hint("Kawasaki 1997 500", None, "Kawasaki") is None
+
+
+def test_detect_model_family_groups_related_variants():
+    assert detect_model_family("Kawasaki Z1000SX", None, "Kawasaki") == "sx"
+    assert detect_model_family("Kawasaki Z900", None, "Kawasaki") == "z"
+    assert detect_model_family("Kawasaki ZX-6R Ninja", None, "Kawasaki") == "zx"
+
+
+def test_filter_training_records_removes_suspicious_and_rare_records():
+    records = [_ready_kawasaki_record(index, family="versys", engine_cc=650) for index in range(6)]
+    records.extend(
+        _ready_kawasaki_record(index + 100, family="ninja", engine_cc=650)
+        for index in range(6)
+    )
+    records.append(
+        _ready_kawasaki_record(
+            999,
+            family="z",
+            engine_cc=400,
+            title="Kawasaki Z400/125 kat A1/B",
+            full_description="Zarejestrowany jako 125, kat. B.",
+            price_pln=25000,
+        )
+    )
+    records.append(
+        _ready_kawasaki_record(
+            1000,
+            family="vulcan",
+            engine_cc=900,
+            title="Kawasaki Vulcan 900 | Custom Bobber | projekt na zamówienie",
+            full_description="Custom bobber project.",
+            price_pln=28900,
+        )
+    )
+    filtered = filter_training_records(records, required_brand="Kawasaki", min_family_records=3)
+    titles = {record["title"] for record in filtered}
+    assert "Kawasaki Z400/125 kat A1/B" not in titles
+    assert "Kawasaki Vulcan 900 | Custom Bobber | projekt na zamówienie" not in titles
+    assert len(filtered) == 12
+
+
+def test_train_price_model_returns_working_estimator():
+    records = [_healthy_record(index) for index in range(24)]
+    records.extend(_healthy_record(index, model="gsxr_750", engine_cc=750) for index in range(24, 40))
+
+    model_bundle = train_price_model(records, search_iterations=2, cv_folds=3)
+
+    assert model_bundle["best_candidate_name"] in {"extra_trees", "random_forest"}
+    assert model_bundle["training_size"] > 0
+    assert model_bundle["validation_metrics"]["mae_pln"] is not None
+    assert len(model_bundle["feature_importances"]) > 0
+
+
+def test_train_price_model_handles_ready_style_records_without_normalized_model():
+    records = [_ready_kawasaki_record(index, family="versys", engine_cc=650) for index in range(20)]
+    records.extend(
+        _ready_kawasaki_record(index, family="ninja", engine_cc=650)
+        for index in range(20, 34)
+    )
+    records.extend(
+        _ready_kawasaki_record(index, family="z", engine_cc=1000, title=f"Kawasaki Z1000 {index}")
+        for index in range(34, 46)
+    )
+
+    model_bundle = train_price_model(records, search_iterations=2, cv_folds=3)
+
+    prediction = predict_price(
+        {
+            "title": "Kawasaki Ninja 650",
+            "full_description": "Serwisowany motocykl Kawasaki.",
+            "brand": "Kawasaki",
+            "vehicle_type": "motorcycle",
+            "technical_state": "Nieuszkodzony",
+            "engine_cc": 650,
+            "year": 2015,
+            "mileage_km": 22000,
+            "image_urls": ["https://example.com/1.jpg"],
+        },
+        model_bundle,
+    )
+
+    assert model_bundle["training_size"] > 0
+    assert isinstance(prediction, int)
+    assert prediction > 0
+
+
+def test_predict_price_returns_int_for_valid_record():
+    records = [_healthy_record(index) for index in range(24)]
+    model_bundle = train_price_model(records, search_iterations=2, cv_folds=3)
+
+    prediction = predict_price(
+        {
+            "title": "Suzuki gsxr_600 K5",
+            "full_description": "Zadbany motocykl.",
+            "normalized_model": "gsxr_600",
+            "engine_cc": 600,
+            "year": 2008,
+            "brand": "Suzuki",
+            "seller_type": "Prywatne",
+            "origin_country": "Polska",
+            "image_urls": ["https://example.com/1.jpg"],
+        },
+        model_bundle,
+    )
+
+    assert isinstance(prediction, int)
+    assert prediction > 0
+
+
+def test_score_records_with_price_model_scores_each_input_record():
+    records = [_healthy_record(index) for index in range(24)]
+    model_bundle = train_price_model(records, search_iterations=2, cv_folds=3)
+
+    scored = score_records_with_price_model(
+        [
+            {
+                "title": "Suzuki GSX-R 600",
+                "normalized_model": "gsxr_600",
+                "engine_cc": 600,
+                "year": 2007,
+                "brand": "Suzuki",
+                "image_urls": [],
+            },
+            {
+                "title": "Suzuki GSX-R 750",
+                "normalized_model": "gsxr_750",
+                "engine_cc": 750,
+                "year": 2009,
+                "brand": "Suzuki",
+                "image_urls": [],
+            },
+        ],
+        model_bundle,
+    )
+
+    assert len(scored) == 2
+    assert scored[0]["predicted_price_pln"] is not None

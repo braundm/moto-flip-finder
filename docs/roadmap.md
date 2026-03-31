@@ -1,16 +1,34 @@
 # Roadmap
 
-## MVP
-- parse one listing
-- save title, description, price, url
-- download image links
-- estimate repair cost
-- compare with healthy market value
-- compute expected profit
+## Current Foundation
 
-## Later
-- multiple sources
-- better model normalization
-- confidence scoring
-- hidden damage risk estimation
-- UI / dashboard
+What already works:
+
+- OLX motorcycle search scraping with pagination
+- OLX detail scraping
+- OpenAI validation and enrichment of uncertain listing fields
+- ready-dataset generation for focused subsets such as `Kawasaki`
+- baseline `scikit-learn` price models trained on ready data
+- legacy GSX-R damage-analysis and profitability flow
+
+## Near Term
+
+1. improve `model_family` and `model_variant` extraction across more brands
+2. add ready datasets for `Honda`, `Yamaha`, and `Suzuki`
+3. train separate per-family price models, for example `Z`, `ZX`, `Ninja`, `Versys`
+4. improve filtering of suspicious business cases before training
+5. keep generated data local and commit only code, tests, and docs
+
+## Mid Term
+
+1. allow the user to choose a target scope such as brand, family, year range, or budget
+2. run scrape -> OpenAI validation -> ready dataset as one practical workflow
+3. combine pricing, risk analysis, and report generation in one repeatable pipeline
+4. compare generalized models against per-family specialist models
+
+## Longer Term
+
+1. expand from brand-specific datasets to a generalized all-motorcycles OLX dataset
+2. add stronger normalization for model families and generations
+3. blend ML pricing with AI-based damage and risk analysis
+4. add a UI or dashboard for interactive filtering and review

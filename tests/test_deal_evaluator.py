@@ -2,7 +2,9 @@ from moto_flip_finder.deal_evaluator import evaluate_listing
 from moto_flip_finder.parser import parse_listing
 
 
-def test_evaluate_listing():
+def test_evaluate_listing(monkeypatch):
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+
     raw_listing = {
         "source": "olx",
         "listing_id": "001",

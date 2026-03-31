@@ -18,9 +18,11 @@ from .repair_estimator import estimate_repair_cost
 
 def load_processed_records(path: Path) -> list[dict[str, Any]]:
     payload = json.loads(path.read_text(encoding="utf-8"))
-    if not isinstance(payload, list):
-        raise ValueError(f"Processed dataset must be a JSON list: {path}")
-    return [item for item in payload if isinstance(item, dict)]
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    if isinstance(payload, dict) and isinstance(payload.get("records"), list):
+        return [item for item in payload["records"] if isinstance(item, dict)]
+    raise ValueError(f"Processed dataset must be a JSON list or object with 'records': {path}")
 
 
 def evaluate_damaged_listings(

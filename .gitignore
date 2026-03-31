@@ -207,4 +207,7 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 data/raw/
+data/ready/
+data/processed/*.json
+data/models/
 *.html
