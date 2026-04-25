@@ -2,9 +2,7 @@ from moto_flip_finder.damage_analysis import analyze_description
 from moto_flip_finder.repair_estimator import estimate_repair_cost
 
 
-def test_estimate_repair_cost(monkeypatch):
-    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
-
+def test_estimate_repair_cost():
     text = "Motocykl po szlifie. Do wymiany owiewki i klamka. Silnik odpala."
 
     analysis = analyze_description(text)

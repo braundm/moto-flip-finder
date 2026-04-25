@@ -14,7 +14,12 @@ from .price_model import score_records_with_price_model, train_price_model
 def save_price_model(model_bundle: dict[str, Any], output_path: Path | None = None) -> Path:
     path = output_path or Path("data/models/healthy_price_model_v2.joblib")
     path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump(model_bundle, path)
+    serializable_bundle = {
+        key: value
+        for key, value in model_bundle.items()
+        if not key.startswith("_")
+    }
+    joblib.dump(serializable_bundle, path)
     return path
 
 
@@ -28,7 +33,7 @@ def save_price_model_report(
     serializable = {
         key: value
         for key, value in model_bundle.items()
-        if key != "estimator"
+        if key != "estimator" and not key.startswith("_")
     }
     path.write_text(json.dumps(serializable, ensure_ascii=False, indent=2), encoding="utf-8")
     return path
@@ -45,7 +50,7 @@ def save_damaged_price_predictions(
 
 
 def build_arg_parser() -> ArgumentParser:
-    parser = ArgumentParser(description="Train sklearn price model on healthy motorcycle comps")
+    parser = ArgumentParser(description="Train price model on healthy motorcycle comps")
     parser.add_argument(
         "--healthy-file",
         default="data/processed/healthy_comps.json",
@@ -58,18 +63,24 @@ def build_arg_parser() -> ArgumentParser:
     )
     parser.add_argument(
         "--model-output",
-        default="data/models/healthy_price_model_v2.joblib",
-        help="Where to save the trained sklearn model",
+        default=None,
+        help="Where to save the trained model. Defaults depend on --backend.",
     )
     parser.add_argument(
         "--report-output",
-        default="data/processed/price_model_training_report.json",
-        help="Where to save the training metrics report",
+        default=None,
+        help="Where to save the training metrics report. Defaults depend on --backend.",
     )
     parser.add_argument(
         "--predictions-output",
-        default="data/processed/damaged_ml_price_predictions.json",
-        help="Where to save scored damaged candidate prices",
+        default=None,
+        help="Where to save scored damaged candidate prices. Defaults depend on --backend.",
+    )
+    parser.add_argument(
+        "--backend",
+        choices=["auto", "comparable", "sklearn", "torch"],
+        default="auto",
+        help="Price-model backend to train and use for scoring",
     )
     parser.add_argument(
         "--search-iterations",
@@ -107,17 +118,38 @@ def main() -> None:
 
     model_bundle = train_price_model(
         healthy_records,
+        backend=args.backend,
         validation_fraction=args.validation_fraction,
         random_seed=args.random_seed,
         cv_folds=args.cv_folds,
         search_iterations=args.search_iterations,
     )
+    model_bundle["healthy_file"] = args.healthy_file
+    model_bundle["damaged_file"] = args.damaged_file
+    actual_backend = model_bundle["backend"]
+    default_stem = (
+        "healthy_price_model_v2"
+        if actual_backend == "sklearn"
+        else f"healthy_price_model_{actual_backend}_v1"
+    )
+    model_output = Path(args.model_output) if args.model_output else Path("data/models") / f"{default_stem}.joblib"
+    report_output = (
+        Path(args.report_output)
+        if args.report_output
+        else Path("data/processed") / f"{default_stem}_report.json"
+    )
+    predictions_output = (
+        Path(args.predictions_output)
+        if args.predictions_output
+        else Path("data/processed") / f"{default_stem}_predictions.json"
+    )
 
-    model_path = save_price_model(model_bundle, Path(args.model_output))
-    report_path = save_price_model_report(model_bundle, Path(args.report_output))
+    model_path = save_price_model(model_bundle, model_output)
+    report_path = save_price_model_report(model_bundle, report_output)
     predictions = score_records_with_price_model(damaged_records, model_bundle)
-    predictions_path = save_damaged_price_predictions(predictions, Path(args.predictions_output))
+    predictions_path = save_damaged_price_predictions(predictions, predictions_output)
 
+    print(f"Backend: {model_bundle['backend']}")
     print(f"Best candidate: {model_bundle['best_candidate_name']}")
     print(f"Training size: {model_bundle['training_size']}")
     print(f"Validation size: {model_bundle['validation_size']}")

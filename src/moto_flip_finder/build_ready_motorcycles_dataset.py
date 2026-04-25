@@ -99,7 +99,7 @@ def build_ready_records_with_brand_filter(
         if not isinstance(url, str) or not url or url in seen_urls:
             continue
 
-        if item.get("is_sensible_listing") is not True:
+        if not _is_ready_listing_candidate(item):
             continue
 
         brand = item.get("brand")
@@ -134,6 +134,27 @@ def build_ready_records_with_brand_filter(
         )
 
     return ready
+
+
+def _is_ready_listing_candidate(item: dict[str, Any]) -> bool:
+    if item.get("is_sensible_listing") is False:
+        return False
+
+    vehicle_type = item.get("vehicle_type")
+    if vehicle_type not in {"motorcycle", "scooter"}:
+        return False
+
+    if not isinstance(item.get("title"), str) or not item["title"].strip():
+        return False
+
+    if not isinstance(item.get("brand"), str) or not item["brand"].strip():
+        return False
+
+    price_pln = item.get("price_pln")
+    if not isinstance(price_pln, int) or price_pln <= 0:
+        return False
+
+    return item.get("is_sensible_listing") is True or vehicle_type in {"motorcycle", "scooter"}
 
 
 def summarize_ready_records(ready_records: list[dict[str, Any]], detail_records: list[dict[str, Any]]) -> dict[str, Any]:
@@ -259,7 +280,7 @@ def build_ready_motorcycles_dataset(
 
 
 def build_arg_parser() -> ArgumentParser:
-    parser = ArgumentParser(description="Build final ready motorcycle data from OLX with OpenAI validation")
+    parser = ArgumentParser(description="Build final ready motorcycle data from OLX with heuristic validation")
     parser.add_argument(
         "--url",
         default="https://www.olx.pl/motoryzacja/motocykle-skutery/",
@@ -293,7 +314,7 @@ def build_arg_parser() -> ArgumentParser:
         "--detail-max-workers",
         type=int,
         default=6,
-        help="Number of concurrent workers for detail scraping and OpenAI validation",
+        help="Number of concurrent workers for detail scraping and validation",
     )
     parser.add_argument(
         "--raw-output-dir",

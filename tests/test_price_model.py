@@ -5,7 +5,10 @@ from moto_flip_finder.price_model import (
     score_records_with_price_model,
     train_price_model,
 )
-from moto_flip_finder.train_ready_price_model import filter_training_records
+from moto_flip_finder.train_ready_price_model import (
+    filter_training_records,
+    run_ready_price_training,
+)
 
 
 def _healthy_record(index: int, *, model: str = "gsxr_600", engine_cc: int = 600) -> dict:
@@ -115,10 +118,34 @@ def test_train_price_model_returns_working_estimator():
 
     model_bundle = train_price_model(records, search_iterations=2, cv_folds=3)
 
+    assert model_bundle["backend"] == "sklearn"
     assert model_bundle["best_candidate_name"] in {"extra_trees", "random_forest"}
     assert model_bundle["training_size"] > 0
     assert model_bundle["validation_metrics"]["mae_pln"] is not None
     assert len(model_bundle["feature_importances"]) > 0
+
+
+def test_train_price_model_auto_falls_back_to_comparable_for_small_dataset():
+    records = [_healthy_record(index) for index in range(8)]
+
+    model_bundle = train_price_model(records)
+    prediction = predict_price(
+        {
+            "title": "Suzuki gsxr_600 K5",
+            "full_description": "Zadbany motocykl.",
+            "normalized_model": "gsxr_600",
+            "engine_cc": 600,
+            "year": 2008,
+            "brand": "Suzuki",
+            "image_urls": ["https://example.com/1.jpg"],
+        },
+        model_bundle,
+    )
+
+    assert model_bundle["backend"] == "comparable"
+    assert model_bundle["best_candidate_name"] == "same_model_trimmed_median"
+    assert isinstance(prediction, int)
+    assert prediction > 0
 
 
 def test_train_price_model_handles_ready_style_records_without_normalized_model():
@@ -152,6 +179,145 @@ def test_train_price_model_handles_ready_style_records_without_normalized_model(
     assert model_bundle["training_size"] > 0
     assert isinstance(prediction, int)
     assert prediction > 0
+
+
+def test_run_ready_price_training_returns_report_payload_and_predictions():
+    ready_records = [_ready_kawasaki_record(index, family="versys", engine_cc=650) for index in range(20)]
+    ready_records.extend(
+        _ready_kawasaki_record(index, family="ninja", engine_cc=650)
+        for index in range(20, 34)
+    )
+    ready_records.extend(
+        _ready_kawasaki_record(index, family="z", engine_cc=1000, title=f"Kawasaki Z1000 {index}")
+        for index in range(34, 46)
+    )
+
+    result = run_ready_price_training(
+        ready_records,
+        required_brand="Kawasaki",
+        min_family_records=3,
+        search_iterations=2,
+        cv_folds=3,
+    )
+
+    assert len(result["training_records"]) > 0
+    assert result["report_payload"]["required_brand"] == "Kawasaki"
+    assert result["report_payload"]["input_record_count"] == len(ready_records)
+    assert result["report_payload"]["training_record_count"] == len(result["training_records"])
+    assert len(result["predictions"]) == len(ready_records)
+    assert "listed_price_pln" in result["predictions"][0]
+    assert "price_delta_pln" in result["predictions"][0]
+
+
+def test_train_price_model_dispatches_to_torch_backend(monkeypatch):
+    records = [_healthy_record(index) for index in range(24)]
+    captured: dict[str, object] = {}
+
+    def fake_train_torch_price_model(input_records, **kwargs):
+        captured["records"] = input_records
+        captured["kwargs"] = kwargs
+        return {
+            "backend": "torch",
+            "best_candidate_name": "torch_mlp_medium",
+            "training_size": 19,
+            "validation_size": 5,
+            "validation_metrics": {"mae_pln": 1234.56, "rmse_pln": 2345.67},
+            "feature_importances": [],
+            "estimator": {"model_type": "torch_mlp"},
+        }
+
+    monkeypatch.setattr(
+        "moto_flip_finder.torch_price_model.train_torch_price_model",
+        fake_train_torch_price_model,
+    )
+
+    model_bundle = train_price_model(
+        records,
+        backend="torch",
+        search_iterations=4,
+        cv_folds=3,
+    )
+
+    assert captured["records"] == records
+    assert captured["kwargs"]["search_iterations"] == 4
+    assert model_bundle["backend"] == "torch"
+    assert model_bundle["best_candidate_name"] == "torch_mlp_medium"
+
+
+def test_predict_price_dispatches_to_torch_backend(monkeypatch):
+    captured: dict[str, object] = {}
+
+    def fake_predict_torch_price(record, model_bundle):
+        captured["record"] = record
+        captured["model_bundle"] = model_bundle
+        return 20500
+
+    monkeypatch.setattr(
+        "moto_flip_finder.torch_price_model.predict_torch_price",
+        fake_predict_torch_price,
+    )
+
+    model_bundle = {
+        "backend": "torch",
+        "estimator": {"model_type": "torch_mlp"},
+    }
+    record = {
+        "title": "Kawasaki Ninja 650",
+        "brand": "Kawasaki",
+        "engine_cc": 650,
+        "year": 2015,
+    }
+
+    prediction = predict_price(record, model_bundle)
+
+    assert prediction == 20500
+    assert captured["record"] == record
+    assert captured["model_bundle"] == model_bundle
+
+
+def test_run_ready_price_training_passes_backend_to_train_price_model(monkeypatch):
+    ready_records = [_ready_kawasaki_record(index) for index in range(20)]
+    captured: dict[str, object] = {}
+
+    def fake_train_price_model(records, **kwargs):
+        captured["records"] = records
+        captured["kwargs"] = kwargs
+        return {
+            "backend": kwargs["backend"],
+            "best_candidate_name": "torch_mlp_small",
+            "validation_metrics": {"mae_pln": 1111.11, "rmse_pln": 2222.22},
+            "training_size": len(records),
+            "validation_size": 4,
+            "feature_importances": [],
+            "estimator": {"model_type": "torch_mlp"},
+        }
+
+    monkeypatch.setattr(
+        "moto_flip_finder.train_ready_price_model.train_price_model",
+        fake_train_price_model,
+    )
+    monkeypatch.setattr(
+        "moto_flip_finder.train_ready_price_model.build_enriched_ready_price_predictions",
+        lambda ready_records, model_bundle: [
+            {
+                "original_listing": ready_records[0],
+                "predicted_price_pln": 20000,
+                "listed_price_pln": ready_records[0]["price_pln"],
+                "price_delta_pln": 1000,
+            }
+        ],
+    )
+
+    result = run_ready_price_training(
+        ready_records,
+        backend="torch",
+        required_brand="Kawasaki",
+        min_family_records=1,
+    )
+
+    assert captured["kwargs"]["backend"] == "torch"
+    assert result["model_bundle"]["backend"] == "torch"
+    assert result["report_payload"]["required_brand"] == "Kawasaki"
 
 
 def test_predict_price_returns_int_for_valid_record():

@@ -62,10 +62,13 @@ def test_motorcycle_listing_validation_from_payload_normalizes_values():
     }
 
 
-def test_validate_motorcycle_listing_returns_empty_payload_on_failure():
+def test_validate_motorcycle_listing_falls_back_to_heuristics_on_failure():
     result = validate_motorcycle_listing({"title": "Honda"}, provider=FailingProvider())
 
-    assert result == empty_motorcycle_listing_validation()
+    assert result["resolved_brand"] == "Honda"
+    assert result["is_sensible_listing"] is False
+    assert result["reject_reason"] == "missing_price"
+    assert result["validation_confidence"] == "medium"
 
 
 def test_validate_motorcycle_listing_uses_provider_result():
@@ -78,4 +81,22 @@ def test_validate_motorcycle_listing_uses_provider_result():
     assert result["resolved_year"] == 2012
     assert result["negotiable"] is False
     assert result["mileage_km"] == 6400
+    assert result["is_sensible_listing"] is True
+
+
+def test_validate_motorcycle_listing_uses_heuristics_without_provider():
+    result = validate_motorcycle_listing(
+        {
+            "title": "Kawasaki Versys 650 2015",
+            "full_description": "Przebieg 23 000 km, cena do negocjacji.",
+            "price_pln": 21900,
+            "engine_cc": 650,
+        },
+        provider=None,
+    )
+
+    assert result["vehicle_type"] == "motorcycle"
+    assert result["resolved_brand"] == "Kawasaki"
+    assert result["mileage_km"] == 23000
+    assert result["negotiable"] is True
     assert result["is_sensible_listing"] is True

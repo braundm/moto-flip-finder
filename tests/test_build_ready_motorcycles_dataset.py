@@ -55,6 +55,23 @@ def test_build_ready_records_filters_unsensible_and_deduplicates():
     ]
 
 
+def test_build_ready_records_accepts_heuristic_motorcycle_when_flag_missing():
+    details = [
+        {
+            "url": "https://example.com/a",
+            "title": "Honda CBF 600",
+            "price_pln": 14900,
+            "is_sensible_listing": None,
+            "vehicle_type": "motorcycle",
+            "brand": "Honda",
+        }
+    ]
+
+    ready = build_ready_records(details)
+
+    assert [item["url"] for item in ready] == ["https://example.com/a"]
+
+
 def test_summarize_ready_records_counts_vehicle_types_and_brands():
     ready = [
         {"vehicle_type": "motorcycle", "brand": "Honda"},
