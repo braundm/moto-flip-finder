@@ -30,6 +30,19 @@ from .import_search import (
 
 PRICE_IN_LINE_PATTERN = re.compile(r"(\d(?:[\d ]{0,20}\d)?)\s*zł\b", re.IGNORECASE)
 UI_IMAGE_MARKERS = [".svg", "app_store", "google_play", "full-screen", "fb."]
+NON_LISTING_IMAGE_MARKERS = [
+    "avatar",
+    "profile",
+    "user-photo",
+    "user_photo",
+    "seller-logo",
+    "seller_logo",
+    "default-user",
+    "default_user",
+    "no-photo",
+    "no_photo",
+    "placeholder",
+]
 
 
 @dataclass
@@ -362,9 +375,13 @@ def _detail_image_urls(
             if src:
                 image_urls.append(_normalize_url(src, detail_url) or src)
 
-    return sorted(
-        set(url for url in image_urls if isinstance(url, str) and _is_listing_image_url(url))
-    )
+    filtered_urls = [
+        url
+        for url in image_urls
+        if isinstance(url, str) and _is_listing_image_url(url)
+    ]
+    unique_urls = list(dict.fromkeys(filtered_urls))
+    return sorted(unique_urls, key=_image_url_sort_key)
 
 
 def _detail_attributes(next_data: Any, soup: BeautifulSoup | None) -> dict[str, str]:
@@ -618,7 +635,23 @@ def _extract_price_from_short_description(text: str) -> int | None:
 
 def _is_listing_image_url(url: str) -> bool:
     lowered = url.lower()
-    return not any(marker in lowered for marker in UI_IMAGE_MARKERS)
+    if any(marker in lowered for marker in UI_IMAGE_MARKERS):
+        return False
+    if any(marker in lowered for marker in NON_LISTING_IMAGE_MARKERS):
+        return False
+    return True
+
+
+def _image_url_sort_key(url: str) -> tuple[int, str]:
+    lowered = url.lower()
+    score = 0
+    if "apollo.olxcdn.com" in lowered or "/v1/files/" in lowered:
+        score += 4
+    if "img.next" in lowered or "img.jsonld" in lowered or "img.seed" in lowered:
+        score += 3
+    if "meta" in lowered:
+        score -= 1
+    return (-score, lowered)
 
 
 def _location_from_json_ld(json_ld_blocks: list[Any]) -> tuple[str | None, str | None]:

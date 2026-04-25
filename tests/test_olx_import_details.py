@@ -126,3 +126,9 @@ def test_is_listing_image_url_filters_ui_assets():
     assert _is_listing_image_url("https://www.olx.pl/app/static/media/app_store.156ac6d41.svg") is False
     assert _is_listing_image_url("https://www.olx.pl/app/static/media/full-screen.5555ba1b6.svg") is False
     assert _is_listing_image_url("https://www.olx.pl/app/static/media/google_play.8cb1ced49.svg") is False
+
+
+def test_is_listing_image_url_filters_profile_like_assets():
+    assert _is_listing_image_url("https://example.com/images/avatar.jpg") is False
+    assert _is_listing_image_url("https://example.com/images/profile-photo.webp") is False
+    assert _is_listing_image_url("https://example.com/images/seller-logo.png") is False

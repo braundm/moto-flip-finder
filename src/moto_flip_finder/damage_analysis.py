@@ -5,7 +5,6 @@ import sys
 
 from .description_analysis_provider import (
     DescriptionAnalysisProvider,
-    OpenAIDescriptionAnalysisProvider,
 )
 from .models import DamageAnalysis
 
@@ -105,9 +104,6 @@ class HeuristicDescriptionAnalysisProvider(DescriptionAnalysisProvider):
 
 
 def get_description_analysis_provider() -> DescriptionAnalysisProvider:
-    if os.getenv("OPENAI_API_KEY"):
-        return OpenAIDescriptionAnalysisProvider()
-
     return HeuristicDescriptionAnalysisProvider()
 
 
@@ -131,9 +127,6 @@ def analyze_description(
 
 
 def _provider_mode_name(provider: DescriptionAnalysisProvider) -> str:
-    if isinstance(provider, OpenAIDescriptionAnalysisProvider):
-        return "openai"
-
     if isinstance(provider, HeuristicDescriptionAnalysisProvider):
         return "heuristic"
 

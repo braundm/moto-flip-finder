@@ -41,6 +41,7 @@ CATEGORICAL_FEATURES = [
 ]
 
 FEATURE_COLUMNS = NUMERIC_FEATURES + CATEGORICAL_FEATURES
+SUPPORTED_PRICE_MODEL_BACKENDS = {"auto", "comparable", "sklearn", "torch"}
 
 
 MODEL_HINT_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
@@ -168,6 +169,51 @@ def prepare_price_training_records(records: list[dict[str, Any]]) -> list[dict[s
 def train_price_model(
     records: list[dict[str, Any]],
     *,
+    backend: str = "auto",
+    validation_fraction: float = 0.2,
+    random_seed: int = 42,
+    cv_folds: int = 5,
+    search_iterations: int = 16,
+) -> dict[str, Any]:
+    selected_backend = _normalize_price_model_backend(backend)
+    if selected_backend == "auto":
+        prepared = prepare_price_training_records(records)
+        if len(prepared) >= 20:
+            return _train_sklearn_price_model(
+                records,
+                validation_fraction=validation_fraction,
+                random_seed=random_seed,
+                cv_folds=cv_folds,
+                search_iterations=search_iterations,
+            )
+        return _train_comparable_price_model(records)
+
+    if selected_backend == "torch":
+        from .torch_price_model import train_torch_price_model
+
+        return train_torch_price_model(
+            records,
+            validation_fraction=validation_fraction,
+            random_seed=random_seed,
+            cv_folds=cv_folds,
+            search_iterations=search_iterations,
+        )
+
+    if selected_backend == "comparable":
+        return _train_comparable_price_model(records)
+
+    return _train_sklearn_price_model(
+        records,
+        validation_fraction=validation_fraction,
+        random_seed=random_seed,
+        cv_folds=cv_folds,
+        search_iterations=search_iterations,
+    )
+
+
+def _train_sklearn_price_model(
+    records: list[dict[str, Any]],
+    *,
     validation_fraction: float = 0.2,
     random_seed: int = 42,
     cv_folds: int = 5,
@@ -228,7 +274,8 @@ def train_price_model(
     feature_importances = _extract_feature_importances(best_model)
 
     return {
-        "version": 3,
+        "version": 4,
+        "backend": "sklearn",
         "trained_at": datetime.now(UTC).isoformat(),
         "feature_columns": FEATURE_COLUMNS,
         "candidate_scores": [
@@ -250,6 +297,18 @@ def train_price_model(
 
 
 def predict_price(record: dict[str, Any], model_bundle: dict[str, Any]) -> int | None:
+    selected_backend = detect_price_model_backend(model_bundle)
+    if selected_backend == "torch":
+        from .torch_price_model import predict_torch_price
+
+        return predict_torch_price(record, model_bundle)
+    if selected_backend == "comparable":
+        return _predict_comparable_price(record, model_bundle)
+
+    return _predict_sklearn_price(record, model_bundle)
+
+
+def _predict_sklearn_price(record: dict[str, Any], model_bundle: dict[str, Any]) -> int | None:
     estimator = model_bundle.get("estimator")
     if estimator is None:
         return None
@@ -280,6 +339,57 @@ def score_records_with_price_model(
             }
         )
     return scored
+
+
+def detect_price_model_backend(model_bundle: dict[str, Any]) -> str:
+    backend = model_bundle.get("backend", "sklearn")
+    return _normalize_price_model_backend(backend)
+
+
+def _train_comparable_price_model(records: list[dict[str, Any]]) -> dict[str, Any]:
+    comparable_records = prepare_price_training_records(records)
+    if not comparable_records:
+        raise ValueError("Need at least one priced record to train the comparable price model")
+
+    validation_pairs: list[tuple[int, int]] = []
+    for index, record in enumerate(comparable_records):
+        holdout_pool = [item for pool_index, item in enumerate(comparable_records) if pool_index != index]
+        predicted = _predict_prepared_record_from_comparables(record, holdout_pool)
+        if predicted is not None and isinstance(record.get("price_pln"), int):
+            validation_pairs.append((record["price_pln"], predicted))
+
+    validation_actual = [actual for actual, _ in validation_pairs]
+    validation_predicted = [predicted for _, predicted in validation_pairs]
+    validation_metrics = (
+        _regression_metrics(validation_actual, validation_predicted)
+        if validation_pairs
+        else {
+            "count": 0,
+            "mae_pln": None,
+            "rmse_pln": None,
+            "median_absolute_error_pln": None,
+            "mape_percent": None,
+        }
+    )
+
+    return {
+        "version": 4,
+        "backend": "comparable",
+        "trained_at": datetime.now(UTC).isoformat(),
+        "feature_columns": FEATURE_COLUMNS,
+        "candidate_scores": [],
+        "best_candidate_name": "same_model_trimmed_median",
+        "best_params": {},
+        "training_size": len(comparable_records),
+        "validation_size": len(validation_pairs),
+        "training_metrics": validation_metrics,
+        "validation_metrics": validation_metrics,
+        "feature_importances": [],
+        "estimator": {
+            "model_type": "comparable_median",
+            "comparable_records": comparable_records,
+        },
+    }
 
 
 def _build_model_pipeline(regressor: Any) -> Pipeline:
@@ -356,6 +466,14 @@ def _extract_feature_importances(model: Pipeline) -> list[dict[str, Any]]:
     ]
 
 
+def _normalize_price_model_backend(backend: str | None) -> str:
+    normalized = str(backend or "auto").strip().casefold()
+    if normalized not in SUPPORTED_PRICE_MODEL_BACKENDS:
+        supported = ", ".join(sorted(SUPPORTED_PRICE_MODEL_BACKENDS))
+        raise ValueError(f"Unsupported price model backend: {backend!r}. Expected one of: {supported}")
+    return normalized
+
+
 def _regression_metrics(actual: list[int], predicted: list[float]) -> dict[str, Any]:
     rounded_predictions = [float(value) for value in predicted]
     mae = round(float(mean_absolute_error(actual, rounded_predictions)), 2)
@@ -379,6 +497,26 @@ def _regression_metrics(actual: list[int], predicted: list[float]) -> dict[str, 
         "median_absolute_error_pln": median_abs_error,
         "mape_percent": mape,
     }
+
+
+def _predict_comparable_price(record: dict[str, Any], model_bundle: dict[str, Any]) -> int | None:
+    estimator = model_bundle.get("estimator")
+    if not isinstance(estimator, dict):
+        return None
+
+    comparable_records = estimator.get("comparable_records")
+    if not isinstance(comparable_records, list):
+        return None
+
+    prepared = prepare_price_training_records([record])
+    if prepared:
+        target = prepared[0]
+    else:
+        target = _prepare_record_without_price(record)
+        if target is None:
+            return None
+
+    return _predict_prepared_record_from_comparables(target, comparable_records)
 
 
 def _prepare_record_without_price(record: dict[str, Any]) -> dict[str, Any] | None:
@@ -418,6 +556,136 @@ def _prepare_record_without_price(record: dict[str, Any]) -> dict[str, Any] | No
         "title_length": len(title or ""),
         "negotiable_flag": _bool_to_int(record.get("negotiable")),
     }
+
+
+def _predict_prepared_record_from_comparables(
+    target: dict[str, Any],
+    comparable_records: list[dict[str, Any]],
+) -> int | None:
+    comparable_set = _select_comparable_records(target, comparable_records)
+    prices = [
+        _int_or_none(item.get("price_pln"))
+        for item in comparable_set
+        if _int_or_none(item.get("price_pln")) is not None
+    ]
+    if not prices:
+        return None
+    return int(median(sorted(prices)))
+
+
+def _select_comparable_records(
+    target: dict[str, Any],
+    comparable_records: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    if not comparable_records:
+        return []
+
+    target_url = _string_or_none(target.get("url"))
+    pool = []
+    for item in comparable_records:
+        comparable_url = _string_or_none(item.get("url"))
+        if target_url and comparable_url == target_url:
+            continue
+        if _int_or_none(item.get("price_pln")) is None:
+            continue
+        pool.append(item)
+
+    if not pool:
+        return []
+
+    normalized_model = _string_or_none(target.get("normalized_model"))
+    if normalized_model:
+        same_model = [
+            item for item in pool if _string_or_none(item.get("normalized_model")) == normalized_model
+        ]
+        if len(same_model) >= 3:
+            same_model_year_window = _filter_by_year_window(target, same_model, 2)
+            if len(same_model_year_window) >= 3:
+                return same_model_year_window
+            return same_model
+
+    model_family = _string_or_none(target.get("model_family"))
+    if model_family and model_family != "unknown":
+        same_family = [
+            item for item in pool if _string_or_none(item.get("model_family")) == model_family
+        ]
+        if len(same_family) >= 3:
+            family_window = _filter_by_engine_and_year(target, same_family, 200, 3)
+            if len(family_window) >= 3:
+                return family_window
+            return same_family
+
+    brand = _string_or_none(target.get("brand"))
+    if brand:
+        same_brand = [item for item in pool if _string_or_none(item.get("brand")) == brand]
+        if len(same_brand) >= 5:
+            near_brand = _closest_by_numeric_similarity(target, same_brand, limit=9)
+            if near_brand:
+                return near_brand
+            return same_brand
+
+    return _closest_by_numeric_similarity(target, pool, limit=9) or pool
+
+
+def _filter_by_year_window(
+    target: dict[str, Any],
+    candidates: list[dict[str, Any]],
+    year_window: int,
+) -> list[dict[str, Any]]:
+    target_year = _int_or_none(target.get("year"))
+    if target_year is None:
+        return []
+    return [
+        item
+        for item in candidates
+        if (item_year := _int_or_none(item.get("year"))) is not None
+        and abs(item_year - target_year) <= year_window
+    ]
+
+
+def _filter_by_engine_and_year(
+    target: dict[str, Any],
+    candidates: list[dict[str, Any]],
+    engine_window: int,
+    year_window: int,
+) -> list[dict[str, Any]]:
+    target_engine = _int_or_none(target.get("engine_cc"))
+    target_year = _int_or_none(target.get("year"))
+    filtered = []
+    for item in candidates:
+        if target_engine is not None:
+            item_engine = _int_or_none(item.get("engine_cc"))
+            if item_engine is None or abs(item_engine - target_engine) > engine_window:
+                continue
+        if target_year is not None:
+            item_year = _int_or_none(item.get("year"))
+            if item_year is None or abs(item_year - target_year) > year_window:
+                continue
+        filtered.append(item)
+    return filtered
+
+
+def _closest_by_numeric_similarity(
+    target: dict[str, Any],
+    candidates: list[dict[str, Any]],
+    *,
+    limit: int,
+) -> list[dict[str, Any]]:
+    scored_candidates = sorted(
+        candidates,
+        key=lambda item: (
+            _numeric_distance(_int_or_none(target.get("engine_cc")), _int_or_none(item.get("engine_cc")), 5000),
+            _numeric_distance(_int_or_none(target.get("year")), _int_or_none(item.get("year")), 100),
+            _numeric_distance(_int_or_none(target.get("mileage_km")), _int_or_none(item.get("mileage_km")), 2_000_000),
+        ),
+    )
+    return scored_candidates[:limit]
+
+
+def _numeric_distance(left: int | None, right: int | None, fallback: int) -> int:
+    if left is None or right is None:
+        return fallback
+    return abs(left - right)
 
 
 def detect_model_hint(
